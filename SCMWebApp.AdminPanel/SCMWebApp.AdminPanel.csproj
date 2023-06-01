@@ -4,8 +4,12 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>e8e2709f-73ab-4732-b3d3-5a21ad23bec0</UserSecretsId>
+    <UserSecretsId>bc83311e-4ec0-4637-96b0-49cb322e2c7a</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.16.0" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SCMWebApp.Shared\SCMWebApp.Shared.csproj" />

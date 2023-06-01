@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using SCMWebApp.AdminPanel.Services;
 using SCMWebApp.Shared.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,10 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddSingleton(builder.Configuration);
-builder.Services.AddDbContext<SCMWebAppDatabaseContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnectionString"), sqlServerOptions => sqlServerOptions.CommandTimeout(60));
-});
+builder.Services.AddDbContext<SCMWebAppDatabaseContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DBConnectionString")));
+builder.Services.AddSingleton<IFileStorageService, AzureBlobStorageService>();
 
 var app = builder.Build();
 
