@@ -1,13 +1,14 @@
-﻿@page "/bcs"
-@model SCMWebApp.Pages.BCSPageModel
+﻿@page "/post-course"
+@model SCMWebApp.Pages.PostgraduatePageModel
 @{
-    ViewData["Title"] = "BCS page";
+    ViewData["Title"] = "Course page";
 }
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>UTS | BCS</title>
+    <title>UTS | Postgraduate Course</title>
 
     <link href="icon/favicon.ico" rel="shortcut icon">
 </head>
@@ -24,11 +25,10 @@
                             <div class="breadcrumbs-wrap">
                                 <ul class="breadcrumbs-inner">
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="/course">Course</a></li>
-                                    <li><a href="/bcs">Computer Science</a></li>
+                                    <li><a href="/post-course">Postgraduate Course</a></li>
                                 </ul>
                                 <div class="title">
-                                    Bachelor of Computer Science(Hons)
+                                    Available Postgraduate Courses
                                 </div>
                             </div>
                         </div>
@@ -47,32 +47,27 @@
                                 <div class="entry-image">
                                     <div class="videobox">
                                         <a class="fancybox" data-type="iframe" href="https://www.youtube.com/embed/X9mveMYAzDY">
-                                            <img src="images/course-single/1.jpg" alt="images">
+                                            <img src="images/home/5.jpg" alt="images">
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="content">
                                 <div class="title">
-                                    <a href="/bcs">Bachelor of Computer Science</a>
+                                    <a href="#">School of Postgraduate Studies</a>
                                 </div>
                                 <div class="author-price">
                                     <div class="author">
                                         <div class="avatar">
-                                            <img src="@(Model.BCS_Staff.Image)" alt="images">
+                                            <img src="@(Model.SPSStaff.Image)" alt="images">
                                         </div>
                                         <div class="info">
                                             <div class="name">
-                                                <a>Dr. Chew Kim Mey</a>
+                                                <b>@(Model.SPSStaff.Name)</b>
                                             </div>
                                             <div class="job">
-                                                Head of Programme, <br />School of Computing and Creative Media
+                                                @(Model.SPSStaff.Position.Role)
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="price-wrap price-course-single">
-                                        <div class="btn-buynow">
-                                            <a href="mailto:chew.kim.mey@uts.edu.my?subject=Enquiry">Contact Me</a>
                                         </div>
                                     </div>
                                 </div>
@@ -84,10 +79,7 @@
                                     <span class="inner">OVERVIEW</span>
                                 </li>
                                 <li class="item-title curriculum">
-                                    <span class="inner">TUITION FEE</span>
-                                </li>
-                                <li class="item-title instructor">
-                                    <span class="inner">PROGRAMME</span>
+                                    <span class="inner">COURSE</span>
                                 </li>
                             </ul>
                             <div class="tab-content-wrap">
@@ -95,136 +87,77 @@
                                     <div class="item-content">
                                         <div class="question-sg text clearfix">
                                             <div class="title">
-                                                <a href="#">Course Overview</a>
+                                                <a href="#">Overview</a>
                                             </div>
                                             <p>
-                                                Computer Science is one of the popular course to be taken. Our university provides graduands three major paths in their future career which are Software Development, Cyber Security and IoT.
+                                                Postgraduate study is study to a level that is higher than a first degree.  The reasons for pursuing a postgraduate degree are diverse and usually driven by personal needs and desires. Improving employment and salary prospects is not the only reason to pursue further study. People also undertake postgraduate study to specialize after doing a more generalize undergraduate degree, to gain profession registration, and to increase their depth of knowledge and expertise in their chosen field – so they can go on to do high-level work that is simulating, challenging, and ultimately more rewarding.
                                             </p>
                                         </div>
                                         <div class="certificate-sg text clearfix">
                                             <div class="title">
-                                                <a href="#">Objectives</a>
+                                                <a href="#">Contact Us Now!</a>
                                             </div>
                                             <div class="certificate">
                                                 <div class="certificate-wrap">
                                                     <ul class="list-certificate">
                                                         <li>
-                                                            Graduates with good level of knowledge and competency skills will be employed or self-employed in relevant software engineering fields; and with appropriate attitudes will enable them to have successful careers.
+                                                            Contact number:   +6084-367300 Ext 509/562
                                                         </li>
                                                         <li>
-                                                            Graduates will acquire abilities for effective communication, collaborative working in diverse teams, and continual development through professional involvement.
-                                                        </li>
-                                                        <li>
-                                                            Graduates will pursue lifelong learning in order to contribute to the advancement of information technology and computer science professions and related contemporary issues.
-                                                        </li>
+                                                            Email:   postgraduate@uts.edu.my
+                                                        </li>                                                      
                                                     </ul>
                                                 </div>
-                                                <div class="images-certificate">
-                                                    <img src="images/course-single/3.jpg" alt="images">
-                                                </div>
                                             </div>
                                         </div>
-
-                                        <div class="requirements-sg text clearfix">
-                                            <div class="title">
-                                                <a href="#">Requirements</a>
-                                            </div>
-                                            <ul class="request">
-                                                <li>
-                                                    Pass Matriculation/Pre-U/Foundation from recognized institutions with minimum CGPA 2.0 and a credit in Additional Mathematics OR Mathematics and one of the subjects in Science/Technology/Engineering at SPM level; or
-                                                </li>
-                                                <li>
-                                                    Pass STPM/A-level with Grade C (GP 2.0) in any two (2) subjects and a credit in Additional Mathematics OR Mathematics and one of the subjects in Science/Technology/Engineering at SPM level; or
-                                                </li>
-                                                <li>
-                                                    Pass STPM in Science Stream with a minimum Grade C (GP 2.0) in a Mathematics subject and a Science/ICT subject; or
-                                                </li>
-                                                <li>
-                                                    *Diploma (Computer Science/Software Engineering/Information Technology/Information Systems) or equivalent with a minimum CGPA 2.5; or
-                                                </li>
-                                                <li>
-                                                    *Diploma in Science and Technology with minimum CGPA of 2.5.
-                                                </li>
-                                                <li>
-                                                    Pass UEC with a minimum Grade B in 5 subjects including a Mathematics subject that is equivalent to the Additional Mathematics at SPM level; or
-                                                </li>
-                                                <li>
-                                                    Other equivalent qualifications recognized by the Malaysian Government.
-                                                </li>
-                                            </ul>
-                                        </div>
-
                                         <div class="price-course-single">
                                             <div class="btn-buynow">
-                                                <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
+                                                <a href="http://oculus.uts.edu.my/apply/signup.php">Enroll Now</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="tab-content">
                                     <div class="item-content">
-                                        <div class="question-sg text clearfix">
+                                        <div class="requirements-sg text clearfix">
                                             <div class="title">
-                                                <a href="#">Tuition Fee</a>
+                                                <a href="#">Our Courses</a>
                                             </div>
-                                            <a href="https://www.uts.edu.my/tuition-fees/">View Programme Fee Here</a>
-                                        </div>
-                                        <div class="access-sg text clearfix">
-                                            <div class="title">
-                                                <a href="#">Need Financial Assistance?</a>
-                                            </div>
-                                            <a href="https://uts.edu.my/wp-content/uploads/2019/04/financial-assistance-apr16-2019.pdf">Click Me</a>
+                                            <ul class="request">
+                                                <li>
+                                                    <a href="/phd-computing">Doctor of Philosophy(PHD) in Computing</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/master-computing">Master of Computing</a>
+                                                </li>
+                                            </ul>
                                         </div>
                                         <div class="certificate-sg text clearfix">
                                             <div class="title">
-                                                <a href="#">Study Loan</a>
+                                                <a href="#">Intakes Available</a>
                                             </div>
-                                            <p>
-                                                Study loan such as <b>PTPTN</b> and <b>MARA</b> are available in UTS.
-                                            </p>
-                                        </div>
-
-                                        <div class="requirements-sg text clearfix">
-                                            <div class="title">
-                                                <a href="#">Any Enquiries?</a>
+                                            <div class="certificate">
+                                                <div class="certificate-wrap">
+                                                    <ul class="list-certificate">
+                                                        <li>
+                                                            March Intake
+                                                        </li>
+                                                        <li>
+                                                            June Intake
+                                                        </li>                                                        
+                                                        <li>
+                                                            September Intake
+                                                        </li>                                                        
+                                                        <li>
+                                                            December Intake
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <ul class="request">
-                                                <li>
-                                                    Contact us admin <b>(+6) 084-367300 </b>
-                                                </li>
-                                                <li>
-                                                    Contact us admin <b>enquiry@uts.edu.my</b>
-                                                </li>
-                                            </ul>
                                         </div>
-
                                         <div class="price-course-single">
                                             <div class="btn-buynow">
-                                                <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-content">
-                                    <div class="item-content">
-                                        <div class="certificate">
-                                            <div class="certificate-wrap">
-                                                <p>
-                                                    <b>Programme Structure</b>
-                                                </p>
-                                                <ul class="list-certificate">
-                                                    <li>
-                                                        <a href="#">Batch BCS2109 and before</a>
-                                                    </li>                                                    
-                                                    <li>
-                                                        <a href="https://scm.uts.edu.my/wp-content/uploads/2023/04/2023BCS-Structure-DFinal.pdf">Batch BCS2202 and onwards</a>
-                                                    </li>
-                                                </ul> <br/>
-                                                <div class="price-course-single">
-                                                    <div class="btn-buynow">
-                                                        <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
-                                                    </div>
-                                                </div>
+                                                <a href="http://oculus.uts.edu.my/apply/signup.php">Enroll Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -242,16 +175,12 @@
                             <div class="content">
                                 <ul class="features">
                                     <li>
-                                        <a href="#">MQA</a>
-                                        <span>MQA/PA 4984</span>
+                                        <a href="#">Certificate</a>
+                                        <span>Yes</span>
                                     </li>
                                     <li>
-                                        <a href="#">Duration</a>
-                                        <span>3.5 Years</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Intakes</a>
-                                        <span>February & September</span>
+                                        <a href="/post-courses">Education Level</a>
+                                        <span>Postgraduate</span>
                                     </li>
                                     <li>
                                         <a href="#">Category</a>
@@ -263,9 +192,8 @@
                                         Share via
                                     </div>
                                     <ul class="social-media">
-                                        <li><a href="https://web.facebook.com/utsofficialswk"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="https://www.instagram.com/utscm/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                        <li><a href="https://www.uts.edu.my/contact-2-2/"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=100064193225861"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.instagram.com/sps__uts/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                         <li><a href="mailto:enquiry@uts.edu.my?subject=Enquiry"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
                                     </ul>
                                 </div>
@@ -281,7 +209,7 @@
                                         <div class="flat-course">
                                             <div class="featured-post">
                                                 <div class="entry-image">
-                                                    <img src="images/header/03_clear.png" alt="images">
+                                                    <img src="images/header/01.png" alt="images">
                                                 </div>
                                             </div>
                                             <div class="course-content clearfix">
@@ -310,7 +238,8 @@
                     </div>
                 </div>
             </div>
-        </div> <br/>
+        </div>
+    </div><!-- courses-single -->
     <script src="javascript/jquery.min.js"></script>
     <script src="javascript/rev-slider.js"></script>
     <script src="javascript/plugins.js"></script>

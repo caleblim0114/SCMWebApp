@@ -3,132 +3,120 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>UTS | SCM</title>
 
-<div id="loading-overlay">
-    <div class="loader"></div>
-</div>
+    <link href="icon/favicon.ico" rel="shortcut icon">
+</head>
+    <body>
+    <div id="loading-overlay">
+        <div class="loader"></div>
+    </div>
 
-<section class="flat-slider style1 clearfix">
-    <div class="rev_slider_wrapper fullwidthbanner-container">
-        <div id="rev-slider1" class="rev_slider fullwidthabanner">
-            <ul>
-                <!-- Slider -->
-                @foreach (var banner in Model.Banners)
-                {
-                    <!-- Slide 1 -->
-                    <li data-transition="random">
-                        <!-- Main Image -->
-                        <img class="imgdim" src="@(banner.ImagePath)" alt="" data-bgposition="center center" data-no-retina>
-                        <div class="overlay"></div>
+    <section class="flat-slider style1 clearfix">
+        <div class="rev_slider_wrapper fullwidthbanner-container">
+            <div id="rev-slider1" class="rev_slider fullwidthabanner">
+                <ul>
+                    <!-- Slider -->
+                    @foreach (var banner in Model.Banners)
+                    {
+                        <!-- Slide 1 -->
+                        <li data-transition="random">
+                            <!-- Main Image -->
+                            <img class="imgdim" src="@(banner.ImagePath)" alt="" data-bgposition="center center" data-no-retina>
+                            <div class="overlay"></div>
 
-                        <!-- Layers -->
-                        <div class="tp-caption tp-resizeme education"
-                             data-x="['left','left','left','center']" data-hoffset="['0','4','4','15']"
-                             data-y="['middle','middle','middle','middle']" data-voffset="['-113','-80','-70','-70']"
-                             data-fontsize="['70','70','50','30']"
-                             data-lineheight="['90','90','70','50']"
-                             data-width="full"
-                             data-height="none"
-                             data-whitespace="normal"
-                             data-transform_idle="o:1;"
-                             data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                             data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                             data-mask_in="x:0px;y:[100%];"
-                             data-mask_out="x:inherit;y:inherit;"
-                             data-start="1000"
-                             data-splitin="none"
-                             data-splitout="none"
-                             data-responsive_offset="on">
-                            <div class="education-text text-white">Education for all</div>
-                        </div>
+                            <!-- Layers -->
+                            <div class="tp-caption tp-resizeme education"
+                                 data-x="['left','left','left','center']" data-hoffset="['0','4','4','15']"
+                                 data-y="['middle','middle','middle','middle']" data-voffset="['-113','-80','-70','-70']"
+                                 data-fontsize="['70','70','50','30']"
+                                 data-lineheight="['90','90','70','50']"
+                                 data-width="full"
+                                 data-height="none"
+                                 data-whitespace="normal"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                                 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                 data-mask_in="x:0px;y:[100%];"
+                                 data-mask_out="x:inherit;y:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on">
+                                <div class="education-text text-white">@(banner.Title)</div>
+                            </div>
 
-                        <div class="tp-caption tp-resizeme text-white complete text-edukin"
-                             data-x="['left','left','left','center']" data-hoffset="['0','4','4','15']"
-                             data-y="['middle','middle','middle','middle']" data-voffset="['-22','-5','-10','-10']"
-                             data-fontsize="['17','17','15','14']"
-                             data-lineheight="['30','30','26','22']"
-                             data-width="full"
-                             data-height="none"
-                             data-whitespace="normal"
-                             data-transform_idle="o:1;"
-                             data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                             data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                             data-mask_in="x:0px;y:[100%];"
-                             data-mask_out="x:inherit;y:inherit;"
-                             data-start="1000"
-                             data-splitin="none"
-                             data-splitout="none"
-                             data-responsive_offset="on"
-                             data-paddingright="['550','155','50','2']">
-                            Complete your educution record collection. Discover Educution's full discography. Education is not key to success in life.
-                        </div>
+                            <div class="tp-caption tp-resizeme text-white complete text-edukin"
+                                 data-x="['left','left','left','center']" data-hoffset="['0','4','4','15']"
+                                 data-y="['middle','middle','middle','middle']" data-voffset="['-22','-5','-10','-10']"
+                                 data-fontsize="['17','17','15','14']"
+                                 data-lineheight="['30','30','26','22']"
+                                 data-width="full"
+                                 data-height="none"
+                                 data-whitespace="normal"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                                 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                 data-mask_in="x:0px;y:[100%];"
+                                 data-mask_out="x:inherit;y:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 data-paddingright="['550','155','50','2']">
+                                @(banner.Description)
+                            </div>
 
-                        <div class="tp-caption"
-                             data-x="['left','left','left','center']" data-hoffset="['0','4','4','15']"
-                             data-y="['middle','middle','middle','middle']" data-voffset="['88','80','60','70']"
-                             data-width="full"
-                             data-height="none"
-                             data-whitespace="normal"
-                             data-transform_idle="o:1;"
-                             data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                             data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                             data-mask_in="x:0px;y:[100%];"
-                             data-mask_out="x:inherit;y:inherit;"
-                             data-start="1000"
-                             data-splitin="none"
-                             data-splitout="none"
-                             data-responsive_offset="on"
-                             data-paddingtop="['50','50','50','50']"
-                             data-paddingbottom="['50','50','50','50']">
-                            <a href="#" class="btn btn-styl1">Read More</a> <a href="#" class="btn btn-styl2"><i class="fa fa-play" aria-hidden="true"></i></a>
-                        </div>
-                        <div class="tp-caption"
-                             data-x="['left','left','left','center']" data-hoffset="['0','4','4','15']"
-                             data-y="['middle','middle','middle','middle']" data-voffset="['88','80','60','70']"
-                             data-width="full"
-                             data-height="none"
-                             data-whitespace="normal"
-                             data-transform_idle="o:1;"
-                             data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                             data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                             data-mask_in="x:0px;y:[100%];"
-                             data-mask_out="x:inherit;y:inherit;"
-                             data-start="1000"
-                             data-splitin="none"
-                             data-splitout="none"
-                             data-responsive_offset="on"
-                             data-paddingtop="['50','50','50','50']"
-                             data-paddingbottom="['50','50','50','50']">
-                            <a href="#course" class="btn btn-styl1">Read More</a> <a href="#greeting" class="btn btn-styl2"><i class="fa fa-play" aria-hidden="true"></i></a>
-                        </div>
+                            <div class="tp-caption"
+                                 data-x="['left','left','left','center']" data-hoffset="['0','4','4','15']"
+                                 data-y="['middle','middle','middle','middle']" data-voffset="['88','80','60','70']"
+                                 data-width="full"
+                                 data-height="none"
+                                 data-whitespace="normal"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                                 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                 data-mask_in="x:0px;y:[100%];"
+                                 data-mask_out="x:inherit;y:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 data-paddingtop="['50','50','50','50']"
+                                 data-paddingbottom="['50','50','50','50']">
+                                <a href="#course" class="btn btn-styl1">Read More</a>
+                            </div>
 
-                        <div class="tp-caption sl-address"
-                             data-x="['left','left','left','center']" data-hoffset="['0','4','4','15']"
-                             data-y="['middle','middle','middle','middle']" data-voffset="['325','280','250','200']"
-                             data-width="full"
-                             data-height="none"
-                             data-whitespace="normal"
-                             data-transform_idle="o:1;"
-                             data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                             data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                             data-mask_in="x:0px;y:[100%];"
-                             data-mask_out="x:inherit;y:inherit;"
-                             data-start="1000"
-                             data-splitin="none"
-                             data-splitout="none"
-                             data-responsive_offset="on"
-                             data-paddingtop="['50','50','50','50']"
-                             data-paddingbottom="['50','50','50','50']">
-                            <a href="#" class="text-white sl-phone"><i class="fa fa-phone" aria-hidden="true"></i> Tel:  (+6) 084-367429 (Admin)</a><a href="#" class="text-white sl-email"><i class="fa fa-envelope" aria-hidden="true"></i> scm@uts.edu.my</a>
-                        </div>
-                    </li>
-                }
+                            <div class="tp-caption sl-address"
+                                 data-x="['left','left','left','center']" data-hoffset="['0','4','4','15']"
+                                 data-y="['middle','middle','middle','middle']" data-voffset="['325','280','250','200']"
+                                 data-width="full"
+                                 data-height="none"
+                                 data-whitespace="normal"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                                 data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                 data-mask_in="x:0px;y:[100%];"
+                                 data-mask_out="x:inherit;y:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 data-paddingtop="['50','50','50','50']"
+                                 data-paddingbottom="['50','50','50','50']">
+                                <a href="#" class="text-white sl-phone"><i class="fa fa-phone" aria-hidden="true"></i> Tel:  (+6) 084-367429 (Admin)</a><a href="#" class="text-white sl-email"><i class="fa fa-envelope" aria-hidden="true"></i> scm@uts.edu.my</a>
+                            </div>
+                        </li>
+                    }
                 </ul>
             </div>
         </div>
     </section>
 
-                    <!-- flat-slider -->
+    <!-- flat-slider -->
     <section class="partner-clients partner-clients-style1" id="course">
         <div class="container">
             <div class="row">
@@ -162,12 +150,9 @@
                                         Make it more simple!
                                     </div>
                                     <div class="apply-sent apply-sent-style1">
-                                        <form action="#" class="form-sent">
-                                            <input type="text" placeholder="Enter your email ...." onclick="">
-                                            <button class="sent-button bg-cl3f4c99">
-                                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                                            </button>
-                                        </form>
+                                        <div class="browse-all-courses pd-browse-course text-center">
+                                            <a href="/#admission" class="btn-browse-courses">Apply Now!</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -178,7 +163,7 @@
         </div>
     </section>
 
-                    <!-- partner-clients -->
+    <!-- partner-clients -->
     <section class="online-courses online-courses-style1">
         <div class="container">
             <div class="title-section text-center">
@@ -192,11 +177,11 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div class="imagebox-courses-type1">
                             <div class="featured-post">
-                                <img src="images/home/bcs_img.jpg" alt="images">
+                                <img src="images/home/bcs_img.jpg" alt="images" style="max-height:320px; max-width:410px;">
                             </div>
                             <div class="author-info">
                                 <div class="avatar">
-                                    <img src="images/home/11.png" alt="images">
+                                    <img src="@(Model.BCS_Staff.Image)" alt="images">
                                 </div>
                                 <div class="category">
                                     computing
@@ -204,19 +189,17 @@
                                 <div class="name">
                                     <a href="#">Bachelor of Computer Science (Hons)</a>
                                 </div>
-                                <div class="border-bt">
-                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div class="imagebox-courses-type1">
                             <div class="featured-post">
-                                <img src="images/home/bai_img.jpg" alt="images">
+                                <img src="images/home/bai_img.jpg" alt="images" style="max-height:320px; max-width:410px;">
                             </div>
                             <div class="author-info">
                                 <div class="avatar">
-                                    <img src="images/home/11.png" alt="images">
+                                    <img src="@(Model.BID_Staff.Image)" alt="images">
                                 </div>
                                 <div class="category">
                                     arts
@@ -224,19 +207,17 @@
                                 <div class="name">
                                     <a href="#">Bachelor of Arts in <br /> Industrial Design</a>
                                 </div>
-                                <div class="border-bt">
-                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div class="imagebox-courses-type1">
                             <div class="featured-post">
-                                <img src="images/home/bdm_img.jpg" alt="images">
+                                <img src="images/home/bdm_img.jpg" alt="images" style="max-height:320px; max-width:410px;">
                             </div>
                             <div class="author-info">
                                 <div class="avatar">
-                                    <img src="images/home/11.png" alt="images">
+                                    <img src="@(Model.BDM_Staff.Image)" alt="images">
                                 </div>
                                 <div class="category">
                                     design
@@ -244,19 +225,17 @@
                                 <div class="name">
                                     <a href="#">Bachelor of Arts in <br /> Creative Digital Media</a>
                                 </div>
-                                <div class="border-bt">
-                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div class="imagebox-courses-type1">
                             <div class="featured-post">
-                                <img src="images/home/bmd_img.jpg" alt="images">
+                                <img src="images/home/bmd_img.jpg" alt="images" style="max-height:320px; max-width:410px;">
                             </div>
                             <div class="author-info">
                                 <div class="avatar">
-                                    <img src="images/home/11.png" alt="images">
+                                    <img src="@(Model.BMD_Staff.Image)" alt="images">
                                 </div>
                                 <div class="category">
                                     mobile game
@@ -264,20 +243,18 @@
                                 <div class="name">
                                     <a href="#">Bachelor of Mobile <br /> Game Development</a>
                                 </div>
-                                <div class="border-bt">
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="browse-all-courses pd-browse-course text-center">
-                <a href="/course" class="btn-browse-courses">Browse all courses</a>
-            </div>
+        </div>
+        <div class="browse-all-courses pd-browse-course text-center">
+            <a href="/course" class="btn-browse-courses">Browse all courses</a>
         </div>
     </section>
 
-                    <!-- online-courses -->
+    <!-- online-courses -->
     <section class="flat-services style1 parallax parallax1 clearfix">
         <div class="section-overlay"></div>
         <div class="container-fluid">
@@ -334,14 +311,14 @@
         </div>
     </section>
 
-                    <!-- flat-services -->
+    <!-- flat-services -->
     <section class="flat-introduce flat-introduce-style1 clearfix" id="greeting">
         <div class="container">
             <div class="col-left">
-                                @*bind db*@
+                @*bind db*@
                 <div class="videobox">
                     <a class="fancybox" data-type="iframe" href="https://www.youtube.com/embed/X9mveMYAzDY">
-                        <img src="images/home/5.jpg" alt="images">
+                        <img src="@(Model.About_Banner.ImagePath)" alt="images">
                     </a>
                     <div class="elip-top">
                         <img src="images/home/42.png" alt="images">
@@ -392,13 +369,13 @@
         </div>
     </section>
 
-                    <!-- flat-introduce -->
+    <!-- flat-introduce -->
     <section class="flat-benefit style1 clearfix" id="admission">
         <div class="container-fluid">
             <div class="col-benefit-left">
                 <div class="wrap-inconbox-benefit">
                     <div class="title-section">
-                        <div class="flat-title small heading-type2 text-white">Why choose us?</div>
+                        <div class="flat-title small heading-type2 text-black">Why choose us?</div>
                     </div>
                     <div class="iconbox-benefit iconbox-benefit-style1">
                         <div class="row">
@@ -406,14 +383,14 @@
                                 <div class="themesflat-content-box" data-padding="0% 4% 0% 0%" data-sdesktoppadding="0% 0% 0% 0%" data-ssdesktoppadding="0% 0% 0% 0%" data-mobipadding="0% 0% 0% 0%" data-smobipadding="0% 0% 0% 0%">
                                     <div class="iconbox">
                                         <div class="iconbox-icon">
-                                            <img src="images/home/18.png" alt="images">
+                                            <img src="images/home/graduate_hat.png" alt="images" style="filter:brightness(0); width:50px; height:50px;">
                                         </div>
                                         <div class="iconbox-content img-one">
                                             <h3>
                                                 <a href="#">Certificate</a>
                                             </h3>
                                             <p>
-                                                Education is the most power which you can to change the world.” Education is the key to.
+                                                Courses in University of Technology Sarawak are certified by Malaysian Qualification Agency and are used in whole Malaysia.
                                             </p>
                                         </div>
                                     </div>
@@ -423,14 +400,14 @@
                                 <div class="themesflat-content-box" data-padding="0% 4% 0% 0%" data-sdesktoppadding="0% 15px 0% 0%" data-ssdesktoppadding="0% 15px 0% 0%" data-mobipadding="0% 0% 0% 0%" data-smobipadding="0% 0% 0% 0%">
                                     <div class="iconbox">
                                         <div class="iconbox-icon">
-                                            <img src="images/home/18.png" alt="images">
+                                            <img src="images/home/facility.png" alt="images" style="filter:brightness(0); width:50px; height:50px;">
                                         </div>
                                         <div class="iconbox-content img-two">
                                             <h3>
                                                 <a href="#">Life Programs</a>
                                             </h3>
                                             <p>
-                                                Education is the most power which you can to change the world.” Education is the key to.
+                                                University of Technology Sarawak is one of the essential in life changing for Malaysian or even human beings.
                                             </p>
                                         </div>
                                     </div>
@@ -440,14 +417,14 @@
                                 <div class="themesflat-content-box" data-padding="0% 4% 0% 0%" data-sdesktoppadding="0% 0% 0% 0%" data-ssdesktoppadding="0% 0% 0% 0%" data-mobipadding="0% 0% 0% 0%" data-smobipadding="0% 0% 0% 0%">
                                     <div class="iconbox">
                                         <div class="iconbox-icon">
-                                            <img src="images/home/21.png" alt="images">
+                                            <img src="images/home/finance.png" alt="images" style="filter:brightness(0); width:50px; height:50px;">
                                         </div>
                                         <div class="iconbox-content img-three">
                                             <h3>
                                                 <a href="#">Affordability</a>
                                             </h3>
                                             <p>
-                                                Education is the most power which you can to change the world.” Education is the key to.
+                                                Having trouble with financial? No worries! our university provides financial aids up to 100% for you!
                                             </p>
                                         </div>
                                     </div>
@@ -457,14 +434,14 @@
                                 <div class="themesflat-content-box" data-padding="0% 4% 0% 0%" data-sdesktoppadding="0% 15px 0% 0%" data-ssdesktoppadding="0% 15px 0% 0%" data-mobipadding="0% 0% 0% 0%" data-smobipadding="0% 0% 0% 0%">
                                     <div class="iconbox">
                                         <div class="iconbox-icon">
-                                            <img src="images/home/21.png" alt="images">
+                                            <img src="images/home/student.png" alt="images" style="filter:brightness(0); width:50px; height:50px;">
                                         </div>
                                         <div class="iconbox-content img-four">
                                             <h3>
                                                 <a href="#">Social</a>
                                             </h3>
                                             <p>
-                                                Education is the most power which you can to change the world.” Education is the key to.
+                                                University of Technology Sarawak provides excellent graduands that ready to serve with society.
                                             </p>
                                         </div>
                                     </div>
@@ -503,7 +480,7 @@
         </div>
     </section>
 
-                    <!-- flat-benefit -->
+    <!-- flat-benefit -->
 
     <section class="slider testimonial-flexslider testimonial-style1 equalize sm-equalize-auto clearfix">
         <div class="wrap-info themesflat-content-box" data-padding="0% 0% 0% 10%" data-sdesktoppadding="0% 0% 0% 0%" data-ssdesktoppadding="0% 0% 0% 0%" data-mobipadding="0% 0% 0% 0%" data-smobipadding="0% 0% 0% 0%">
@@ -580,7 +557,7 @@
         </div>
     </section>
 
-                    <!-- testimonial -->
+    <!-- testimonial -->
     <section class="quick-link quick-link-style1 parallax parallax2" id="link">
         <div class="section-overlay"></div>
         <div class="container">
@@ -599,10 +576,7 @@
                         <div class="btn-apply-link">
                             <ul>
                                 <li>
-                                    <a class="btn btn-apply bg-clff5f60">Apply now</a>
-                                </li>
-                                <li>
-                                    <a class="btn btn-request lt-sp06">Request Service</a>
+                                    <a class="btn btn-apply bg-clff5f60" href="/#admission">Apply now</a>
                                 </li>
                             </ul>
                         </div>
@@ -641,4 +615,6 @@
         </div>
     </section>
 
-                    <!-- quick-link -->
+    <!-- quick-link -->
+    </body>
+</html>

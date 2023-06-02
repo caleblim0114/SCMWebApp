@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace SCMWebApp.Pages
 {
-    public class CoursePageModel : PageModel
+    public class MasterComputingModel : PageModel
     {
         public void OnGet()
         {

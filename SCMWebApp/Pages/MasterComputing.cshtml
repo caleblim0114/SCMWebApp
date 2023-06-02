@@ -1,13 +1,15 @@
-﻿@page "/bcs"
-@model SCMWebApp.Pages.BCSPageModel
+﻿@page "/master-computing"
+@model SCMWebApp.Pages.MasterComputingModel
 @{
-    ViewData["Title"] = "BCS page";
+    ViewData["Title"] = "Master in computing page";
 }
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>UTS | BCS</title>
+    <title>UTS | Master</title>
 
     <link href="icon/favicon.ico" rel="shortcut icon">
 </head>
@@ -24,11 +26,11 @@
                             <div class="breadcrumbs-wrap">
                                 <ul class="breadcrumbs-inner">
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="/course">Course</a></li>
-                                    <li><a href="/bcs">Computer Science</a></li>
+                                    <li><a href="/post-course">Postgraduate Course</a></li>
+                                    <li><a href="/master-computing">Master in Computing</a></li>
                                 </ul>
                                 <div class="title">
-                                    Bachelor of Computer Science(Hons)
+                                    Master in Computing
                                 </div>
                             </div>
                         </div>
@@ -54,25 +56,25 @@
                             </div>
                             <div class="content">
                                 <div class="title">
-                                    <a href="/bcs">Bachelor of Computer Science</a>
+                                    <a href="/bcs">Master of Computing</a>
                                 </div>
                                 <div class="author-price">
                                     <div class="author">
                                         <div class="avatar">
-                                            <img src="@(Model.BCS_Staff.Image)" alt="images">
+                                            <img src="images/course-single/2.jpg" alt="images">
                                         </div>
                                         <div class="info">
                                             <div class="name">
-                                                <a>Dr. Chew Kim Mey</a>
+                                                <a href="#">Dr. Tariq Zaman</a>
                                             </div>
                                             <div class="job">
-                                                Head of Programme, <br />School of Computing and Creative Media
+                                                Coordinator, <br />Master of Computing
                                             </div>
                                         </div>
                                     </div>
                                     <div class="price-wrap price-course-single">
                                         <div class="btn-buynow">
-                                            <a href="mailto:chew.kim.mey@uts.edu.my?subject=Enquiry">Contact Me</a>
+                                            <a href="mailto:tariqzaman@uts.edu.my?subject=Enquiry">Contact Me</a>
                                         </div>
                                     </div>
                                 </div>
@@ -98,29 +100,43 @@
                                                 <a href="#">Course Overview</a>
                                             </div>
                                             <p>
-                                                Computer Science is one of the popular course to be taken. Our university provides graduands three major paths in their future career which are Software Development, Cyber Security and IoT.
+                                                A Master in Computing program is one of the high levels of academic qualifications one can achieve. This qualification will enable you to develop an advanced understanding of your selected focus area in the discipline of computing, placing you at the forefront of your chosen field of research.
+                                            </p>
+                                        </div>
+                                        <div class="question-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Programme Mode</a>
+                                            </div>
+                                            <p>
+                                                Research
                                             </p>
                                         </div>
                                         <div class="certificate-sg text clearfix">
                                             <div class="title">
-                                                <a href="#">Objectives</a>
+                                                <a href="#">Specializations</a>
                                             </div>
                                             <div class="certificate">
                                                 <div class="certificate-wrap">
                                                     <ul class="list-certificate">
                                                         <li>
-                                                            Graduates with good level of knowledge and competency skills will be employed or self-employed in relevant software engineering fields; and with appropriate attitudes will enable them to have successful careers.
+                                                            Computer Science
                                                         </li>
                                                         <li>
-                                                            Graduates will acquire abilities for effective communication, collaborative working in diverse teams, and continual development through professional involvement.
+                                                            Information System
                                                         </li>
                                                         <li>
-                                                            Graduates will pursue lifelong learning in order to contribute to the advancement of information technology and computer science professions and related contemporary issues.
+                                                            Software Engineering
+                                                        </li>
+                                                        <li>
+                                                            Information Technoloty
+                                                        </li>
+                                                        <li>
+                                                            Data Science
+                                                        </li>
+                                                        <li>
+                                                            Cyber Security
                                                         </li>
                                                     </ul>
-                                                </div>
-                                                <div class="images-certificate">
-                                                    <img src="images/course-single/3.jpg" alt="images">
                                                 </div>
                                             </div>
                                         </div>
@@ -131,32 +147,23 @@
                                             </div>
                                             <ul class="request">
                                                 <li>
-                                                    Pass Matriculation/Pre-U/Foundation from recognized institutions with minimum CGPA 2.0 and a credit in Additional Mathematics OR Mathematics and one of the subjects in Science/Technology/Engineering at SPM level; or
+                                                    A Bachelor’s Degree in Computing or in the area of science and technology or related to computing with a minimum CGPA of 2.75 or equivalent, as accepted by the HEP Senate; OR
                                                 </li>
                                                 <li>
-                                                    Pass STPM/A-level with Grade C (GP 2.0) in any two (2) subjects and a credit in Additional Mathematics OR Mathematics and one of the subjects in Science/Technology/Engineering at SPM level; or
+                                                    A Bachelor’s Degree in Computing or in the area of science and technology or related to computing with a minimum CGPA of 2.50 and not meeting CGPA of 2.75, can be accepted subject to rigorous internal assessment; OR
                                                 </li>
                                                 <li>
-                                                    Pass STPM in Science Stream with a minimum Grade C (GP 2.0) in a Mathematics subject and a Science/ICT subject; or
+                                                    A Bachelor’s Degree in Computing or in the area of science and technology or related to computing with minimum CGPA of 2.00 and not meeting CGPA of 2.50, can be accepted subject to a minimum of 5 years working experience in the relevant field and rigorous internal assessment.
                                                 </li>
                                                 <li>
-                                                    *Diploma (Computer Science/Software Engineering/Information Technology/Information Systems) or equivalent with a minimum CGPA 2.5; or
-                                                </li>
-                                                <li>
-                                                    *Diploma in Science and Technology with minimum CGPA of 2.5.
-                                                </li>
-                                                <li>
-                                                    Pass UEC with a minimum Grade B in 5 subjects including a Mathematics subject that is equivalent to the Additional Mathematics at SPM level; or
-                                                </li>
-                                                <li>
-                                                    Other equivalent qualifications recognized by the Malaysian Government.
+                                                    Candidates without a qualification in the related fields or relevant working experience must undergo appropriate prerequisite courses determined by the HEP and meet the minimum CGPA based on (i) to (iii).
                                                 </li>
                                             </ul>
                                         </div>
 
                                         <div class="price-course-single">
                                             <div class="btn-buynow">
-                                                <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
+                                                <a href="http://oculus.uts.edu.my/apply/signup.php">Enroll Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -200,7 +207,7 @@
 
                                         <div class="price-course-single">
                                             <div class="btn-buynow">
-                                                <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
+                                                <a href="http://oculus.uts.edu.my/apply/signup.php">Enroll Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -210,21 +217,42 @@
                                         <div class="certificate">
                                             <div class="certificate-wrap">
                                                 <p>
+                                                    <b>Additional Requirement</b>
+                                                </p>
+                                                <ul class="list-certificate">
+                                                    <li>
+                                                        Submit a 1,000-1,500 word prospectus (Research Proposal) explaining the proposed research in the chosen field of study
+                                                    </li>
+                                                </ul> <br />
+                                            </div>                                            
+                                            <div class="certificate-wrap">
+                                                <p>
                                                     <b>Programme Structure</b>
                                                 </p>
                                                 <ul class="list-certificate">
                                                     <li>
-                                                        <a href="#">Batch BCS2109 and before</a>
-                                                    </li>                                                    
-                                                    <li>
-                                                        <a href="https://scm.uts.edu.my/wp-content/uploads/2023/04/2023BCS-Structure-DFinal.pdf">Batch BCS2202 and onwards</a>
+                                                        Depends on individual research topic
                                                     </li>
-                                                </ul> <br/>
-                                                <div class="price-course-single">
-                                                    <div class="btn-buynow">
-                                                        <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
-                                                    </div>
-                                                </div>
+                                                </ul> <br />
+                                            </div>
+                                            <div class="certificate-wrap">
+                                                <p>
+                                                    <b>Intake Available</b>
+                                                </p>
+                                                <ul class="list-certificate">
+                                                    <li>
+                                                        March Intake
+                                                    </li>
+                                                    <li>
+                                                        June Intake
+                                                    </li>
+                                                    <li>
+                                                        September Intake
+                                                    </li>
+                                                    <li>
+                                                        December Intake
+                                                    </li>
+                                                </ul> <br />
                                             </div>
                                         </div>
                                     </div>
@@ -243,15 +271,11 @@
                                 <ul class="features">
                                     <li>
                                         <a href="#">MQA</a>
-                                        <span>MQA/PA 4984</span>
+                                        <span>MQA/PA 12389</span>
                                     </li>
                                     <li>
                                         <a href="#">Duration</a>
-                                        <span>3.5 Years</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Intakes</a>
-                                        <span>February & September</span>
+                                        <span>2 Years Minimum</span>
                                     </li>
                                     <li>
                                         <a href="#">Category</a>
@@ -263,9 +287,8 @@
                                         Share via
                                     </div>
                                     <ul class="social-media">
-                                        <li><a href="https://web.facebook.com/utsofficialswk"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="https://www.instagram.com/utscm/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                        <li><a href="https://www.uts.edu.my/contact-2-2/"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=100064193225861"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.instagram.com/sps__uts/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                         <li><a href="mailto:enquiry@uts.edu.my?subject=Enquiry"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
                                     </ul>
                                 </div>
@@ -310,35 +333,35 @@
                     </div>
                 </div>
             </div>
-        </div> <br/>
-    <script src="javascript/jquery.min.js"></script>
-    <script src="javascript/rev-slider.js"></script>
-    <script src="javascript/plugins.js"></script>
-    <script src="javascript/jquery-countTo.js"></script>
-    <script src="javascript/jquery-ui.js"></script>
-    <script src="javascript/jquery-fancybox.js"></script>
-    <script src="javascript/flex-slider.min.js"></script>
-    <script src="javascript/scroll-img.js"></script>
-    <script src="javascript/owl.carousel.min.js"></script>
-    <script src="javascript/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="javascript/parallax.js"></script>
-    <script src="javascript/jquery-isotope.js"></script>
-    <script src="javascript/equalize.min.js"></script>
-    <script src="javascript/main.js"></script>
+        </div> <br />
+        <script src="javascript/jquery.min.js"></script>
+        <script src="javascript/rev-slider.js"></script>
+        <script src="javascript/plugins.js"></script>
+        <script src="javascript/jquery-countTo.js"></script>
+        <script src="javascript/jquery-ui.js"></script>
+        <script src="javascript/jquery-fancybox.js"></script>
+        <script src="javascript/flex-slider.min.js"></script>
+        <script src="javascript/scroll-img.js"></script>
+        <script src="javascript/owl.carousel.min.js"></script>
+        <script src="javascript/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="javascript/parallax.js"></script>
+        <script src="javascript/jquery-isotope.js"></script>
+        <script src="javascript/equalize.min.js"></script>
+        <script src="javascript/main.js"></script>
 
-    <!-- slider -->
-    <script src="rev-slider/js/jquery.themepunch.tools.min.js"></script>
-    <script src="rev-slider/js/jquery.themepunch.revolution.min.js"></script>
+        <!-- slider -->
+        <script src="rev-slider/js/jquery.themepunch.tools.min.js"></script>
+        <script src="rev-slider/js/jquery.themepunch.revolution.min.js"></script>
 
-    <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.actions.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.carousel.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.kenburn.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.layeranimation.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.migration.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.navigation.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.parallax.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.slideanims.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.video.min.js"></script>
+        <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.actions.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.carousel.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.kenburn.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.layeranimation.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.migration.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.navigation.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.parallax.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.slideanims.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.video.min.js"></script>
 </body>
 </html>
