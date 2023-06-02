@@ -39,7 +39,7 @@
          "ObjectType": 0
       }
    ],
-   "UiHint": "SCMWebApp.Database\\SCMWebApp.Database.sqlproj",
+   "UiHint": "scmwebapp.SCMWebAppDatabase.dbo",
    "UncountableWords": null,
    "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": false,

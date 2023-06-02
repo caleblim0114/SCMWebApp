@@ -1,7 +1,7 @@
 ﻿@page
-@model SCMWebApp.AdminPanel.Pages.MediaModel
+@model SCMWebApp.AdminPanel.Pages.StaffModel
 @{
-    ViewData["Title"] = "Media";
+    ViewData["Title"] = "Staff";
 }
 
 <!DOCTYPE html>
@@ -48,46 +48,41 @@
     <table>
         <tr>
             <th>Image</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Image Type</th>
+            <th>Name</th>
+            <th>Phone No.</th>
+            <th>Email</th>
+            <th>Position</th>
+            <th>Programme</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
 
-        @foreach (var banner in Model.Banners)
+        @foreach (var staff in Model.Staffs)
         {
             <tr>
                 <td>
-                    <img src="@(banner.ImagePath)" class="my-image">
+                    <img src="@(staff.Image)" class="my-image">
                 </td>
-                <td>@(banner.Title)</td>
-                <td>@(banner.Description)</td>
-                <td>@(banner.BannerType.Name)</td>
+                <td>@(staff.Name)</td>
+                <td>@(staff.PhoneNum)</td>
+                <td>@(staff.Email)</td>
+                <td>@(staff.Position.Role)</td>
+                <td>@(staff.Programme.Name)</td>
                 <td>
-                    <a href="/EditImage?id=@banner.Id">Edit</a>
+                    <a href="/EditStaff?id=@staff.Id">Edit</a>
                 </td>
                 <td>
-                    @*<input type="button" class="my-delete-button" onclick="@(Model.DeleteMedia(banner.Id))" value="Delete">*@
-                    <a href="/DeleteImage?id=@banner.Id">Delete</a>
+                    <a href="/DeleteStaff?id=@staff.Id">Delete</a>
                 </td>
             </tr>
         }
 
         <tr>
             <td>
-                <a href="/Upload">Add</a>
+                <a href="/AddStaff">Add</a>
             </td>
         </tr>
     </table>
 
 </body>
 </html>
-
-@*<a href="path?imageid=@banner.Id">Edit</a>
-
-onget(int imageid)*@
-@*<a href="path/@banner.Id">Edit</a>
-
-"{id}"
-onget(int id)*@

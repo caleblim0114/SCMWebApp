@@ -27,8 +27,6 @@ namespace SCMWebApp.Shared.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("Scaffolding:ConnectionString", "Data Source=(local);Initial Catalog=SCMWebApp.Database;Integrated Security=true");
-
             modelBuilder.Entity<Banner>(entity =>
             {
                 entity.HasOne(d => d.BannerType)

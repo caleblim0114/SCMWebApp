@@ -1,8 +1,9 @@
-﻿@page 
-@model SCMWebApp.AdminPanel.Pages.UploadModel
+﻿@page "/DeleteImage"
+@model SCMWebApp.AdminPanel.Pages.DeleteImageModel
 @{
-    ViewData["Title"] = "Upload";
+    ViewData["Title"] = "Delete Media";
 }
+
 <style>
     .form-container {
         width: 300px;
@@ -37,21 +38,19 @@
     <h1>@ViewData["Title"]</h1>
 
     <form name="upload-form" method="post" enctype="multipart/form-data" class="form-container">
-        Select an image to upload:
+        Current Image:
         <br />
-        <input type="file" accept="image/*" asp-for="ImageType.ImagePath" name="Image" class="form-control"/>
+        <img src="@(Model.Banner.ImagePath)" style="width: 260px; height: 200px;" />
+        <br />
         Title:
-        <input type="text" asp-for="ImageType.Title" name="Title" class="form-control"/>
+        <input type="text" asp-for="NewBanner.Title" name="Title" class="form-control" readonly>
         Description:
-        <input type="text" asp-for="ImageType.Description" name="Description" class="form-control" />
-        MediaType:
-        <select asp-for="ImageType.BannerTypeId" class="form-control" name="BannerTypeId">
-            <option value="1">Introduction Page</option>
-            <option value="2">Course Banner</option>
-            <option value="4">About Banner</option>
-            <option value="5">About Link</option>
+        <input type="text" asp-for="NewBanner.Description" name="Description" class="form-control" readonly>
+        ImageType:
+        <select asp-for="NewBanner.BannerTypeId" class="form-control" name="BannerTypeId">
+            <option value="3">Disabled</option>
         </select>
         <br />
-        <input type="submit" value="Upload"/>
+        <input type="submit" value="Delete" />
     </form>
 </div>

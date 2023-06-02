@@ -1,18 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.TagHelpers;
 using SCMWebApp.AdminPanel.Services;
 using SCMWebApp.Shared.Models;
 
 namespace SCMWebApp.AdminPanel.Pages
 {
-    public class UploadModel : PageModel
+    public class AddStaffModel : PageModel
     {
-        private readonly ILogger<UploadModel> _logger;
+        private readonly ILogger<AddStaffModel> _logger;
         private SCMWebAppDatabaseContext _databaseContext;
         private IFileStorageService _fileStorageService;
 
-        public UploadModel (ILogger<UploadModel> logger, SCMWebAppDatabaseContext databaseContext, IFileStorageService fileStorageService)
+        public AddStaffModel(ILogger<AddStaffModel> logger, SCMWebAppDatabaseContext databaseContext, IFileStorageService fileStorageService)
         {
             _databaseContext = databaseContext;
             _logger = logger;
@@ -20,14 +19,14 @@ namespace SCMWebApp.AdminPanel.Pages
         }
 
         [BindProperty]
-        public Banner ImageType { get; set; }
+        public Staff NewStaff { get; set; }
 
         [BindProperty]
-        public  IFormFile? Image { get; set; }
+        public IFormFile StaffImage { get; set; }
 
         public void OnGet()
         {
-            
+
         }
 
         public async Task<IActionResult> OnPostAsync()
@@ -36,14 +35,12 @@ namespace SCMWebApp.AdminPanel.Pages
             {
                 return Page();
             }
-            if (Image != null)
-            {
-                var imageUrl = await _fileStorageService.CreateFileAsync("image", Image.FileName, Image.OpenReadStream(), Image.ContentType);
-                ImageType.ImagePath = imageUrl;
-            }
-            _databaseContext.Add(ImageType);
+
+            var imageUrl = await _fileStorageService.CreateFileAsync("image", StaffImage.FileName, StaffImage.OpenReadStream(), StaffImage.ContentType);
+            NewStaff.Image = imageUrl;
+            _databaseContext.Add(NewStaff);
             await _databaseContext.SaveChangesAsync();
-            return RedirectToPage("./Media");
+            return RedirectToPage("./Staff");
         }
     }
 }

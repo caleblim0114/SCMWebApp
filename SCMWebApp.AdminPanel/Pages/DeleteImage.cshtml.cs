@@ -1,22 +1,23 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
 using SCMWebApp.AdminPanel.Services;
 using SCMWebApp.Shared.Models;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace SCMWebApp.AdminPanel.Pages
 {
-    public class EditImageModel : PageModel
+    public class DeleteImageModel : PageModel
     {
         [BindProperty]
         public Banner Banner { get; set; } = new Banner();
 
-        private readonly ILogger<EditImageModel> _logger;
+        [BindProperty]
+        public Banner NewBanner { get; set; } = new();
+
+        private readonly ILogger<DeleteImageModel> _logger;
         private SCMWebAppDatabaseContext _databaseContext;
         private IFileStorageService _fileStorageService;
 
-        public EditImageModel(ILogger<EditImageModel> logger, SCMWebAppDatabaseContext databaseContext, IFileStorageService fileStorageService)
+        public DeleteImageModel(ILogger<DeleteImageModel> logger, SCMWebAppDatabaseContext databaseContext, IFileStorageService fileStorageService)
         {
             _logger = logger;
             _databaseContext = databaseContext;
@@ -35,6 +36,9 @@ namespace SCMWebApp.AdminPanel.Pages
                     .FirstOrDefault();
 
                 Banner = banner;
+                NewBanner.Title = Banner.Title;
+                NewBanner.Description = Banner.Description;
+                NewBanner.BannerTypeId = 3;
             }
             catch (Exception ex)
             {
@@ -44,34 +48,23 @@ namespace SCMWebApp.AdminPanel.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
             var imgDetails = _databaseContext.Banner
                 .Where(b => b.Id == Banner.Id)
                 .FirstOrDefault();
 
-            if (Image != null)
+            if (imgDetails != null)
             {
-                if (imgDetails != null)
+                if (imgDetails.ImagePath != null)
                 {
-                    if (imgDetails.ImagePath != null)
-                    {
-                        await _fileStorageService.DeleteFileIfExistsAsync(imgDetails.ImagePath);
-                    }
-
-                    var newImage = await _fileStorageService.CreateFileAsync("image", Image.FileName, Image.OpenReadStream(), Image.ContentType);
-                    imgDetails.ImagePath = newImage;
+                    await _fileStorageService.DeleteFileIfExistsAsync(imgDetails.ImagePath);
                 }
+
+                _databaseContext.Banner.Remove(imgDetails);
+                await _databaseContext.SaveChangesAsync();
+                return RedirectToPage("./Media");
             }
 
-            imgDetails.Title = Banner.Title;
-            imgDetails.Description = Banner.Description;
-            imgDetails.BannerTypeId = Banner.BannerTypeId;
-            await _databaseContext.SaveChangesAsync();
-            return RedirectToPage("./Media");
+            return Page();
         }
     }
 }

@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
+using SCMWebApp.AdminPanel.Services;
 using SCMWebApp.Shared.Models;
 
 namespace SCMWebApp.AdminPanel.Pages
@@ -10,10 +12,10 @@ namespace SCMWebApp.AdminPanel.Pages
         [BindProperty]
         public List<Banner> Banners { get; set; } = new List<Banner>();
 
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ILogger<MediaModel> _logger;
         private SCMWebAppDatabaseContext _databaseContext;
 
-        public MediaModel(ILogger<IndexModel> logger, SCMWebAppDatabaseContext databaseContext)
+        public MediaModel(ILogger<MediaModel> logger, SCMWebAppDatabaseContext databaseContext)
         {
             _logger = logger;
             _databaseContext = databaseContext;
@@ -34,5 +36,24 @@ namespace SCMWebApp.AdminPanel.Pages
 
             }
         }
+
+        //public async Task<RedirectToPageResult> DeleteMedia(int id)
+        //{
+        //    var imgDetails = _databaseContext.Banner
+        //        .Where(x => x.Id == id)
+        //        .FirstOrDefault();
+
+        //    if (imgDetails != null)
+        //    {
+        //        if (imgDetails.ImagePath != null)
+        //        {
+        //            await _fileStorageService.DeleteFileIfExistsAsync(imgDetails.ImagePath);
+        //        }
+        //        _databaseContext.Banner.Remove(imgDetails);
+        //        await _databaseContext.SaveChangesAsync();
+        //        return RedirectToPage("./Media");
+        //    }
+        //    return RedirectToPage("./Media");
+        //}
     }
 }

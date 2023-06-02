@@ -13,9 +13,10 @@ namespace SCMWebApp.AdminPanel.Pages
         private readonly ILogger<IndexModel> _logger;
         private SCMWebAppDatabaseContext _databaseContext;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(ILogger<IndexModel> logger, SCMWebAppDatabaseContext databaseContext)
         {
             _logger = logger;
+            _databaseContext = databaseContext;
         }
 
         public void OnGet()

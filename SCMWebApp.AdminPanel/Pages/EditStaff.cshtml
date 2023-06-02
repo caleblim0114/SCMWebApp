@@ -1,0 +1,73 @@
+﻿@page
+@model SCMWebApp.AdminPanel.Pages.EditStaffModel
+@{
+    ViewData["Title"] = "Edit Staff";
+}
+
+<style>
+    .form-container {
+        width: 300px;
+        height: 600px;
+        background-color: #E7E7E7;
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .image-container {
+        width: 260px;
+        height: 200px;
+        background-color: white;
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+</style>
+
+<div>
+    <h1>@ViewData["Title"]</h1>
+
+    <form name="upload-form" method="post" enctype="multipart/form-data" class="form-container">
+        Current Image:
+        <br />
+        <img src="@(Model.Staff.Image)" style="width: 100px; height: 100px;" />
+        <br />
+        Select an image to upload:
+        <br />
+        <input type="file" accept="image/*" asp-for="Staff.Image" name="StaffImage" class="form-control" />
+        Name:
+        <input type="text" asp-for="Staff.Name" name="Name" class="form-control" />
+        Phone No.:
+        <input type="tel" asp-for="Staff.PhoneNum" name="PhoneNum" class="form-control" />
+        Email:
+        <input type="text" asp-for="Staff.Email" name="Email" class="form-control" />
+        Position:
+        <select asp-for="Staff.Position" class="form-control" name="PositionId">
+            <option value="1">Dean</option>
+            <option value="2">Deputy Dean</option>
+            <option value="3">Head of Programme</option>
+            <option value="4">Lecturer</option>
+        </select>
+        Programme:
+        <select asp-for="Staff.Programme" class="form-control" name="ProgrammeId">
+            <option value="1">Bachelor of Mobile Game Development</option>
+            <option value="2">Bachelor of Computer Science</option>
+            <option value="3">Bachelor of Arts in Industrial Design</option>
+            <option value="4">Bachelor of Arts in Creative Digital Media</option>
+            <option value="5">School of Computing and Creative Media</option>
+            <option value="6">School of Postgraduate Studies</option>
+        </select>
+        <br />
+        <input type="submit" value="Update" />
+    </form>
+</div>
