@@ -1647,7 +1647,7 @@ input::-webkit-input-placeholder {
 
 /*footer*/
 .footer-type1{
-    background-image: url(../images/footer/darkgray.jpg);
+    background-color:gray;
     background-size: cover;
 }
 .footer-type1 .form-send-email{
