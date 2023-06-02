@@ -150,12 +150,9 @@
                                         Make it more simple!
                                     </div>
                                     <div class="apply-sent apply-sent-style1">
-                                        <form action="#" class="form-sent">
-                                            <input type="text" placeholder="Enter your email ...." onclick="">
-                                            <button class="sent-button bg-cl3f4c99">
-                                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                                            </button>
-                                        </form>
+                                        <div class="browse-all-courses pd-browse-course text-center">
+                                            <a href="/#admission" class="btn-browse-courses">Apply Now!</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +181,7 @@
                             </div>
                             <div class="author-info">
                                 <div class="avatar">
-                                    <img src="images/home/bcs_hop.png" alt="images">
+                                    <img src="@(Model.BCS_Staff.Image)" alt="images">
                                 </div>
                                 <div class="category">
                                     computing
@@ -202,7 +199,7 @@
                             </div>
                             <div class="author-info">
                                 <div class="avatar">
-                                    <img src="images/home/bai_hop.png" alt="images">
+                                    <img src="@(Model.BID_Staff.Image)" alt="images">
                                 </div>
                                 <div class="category">
                                     arts
@@ -220,7 +217,7 @@
                             </div>
                             <div class="author-info">
                                 <div class="avatar">
-                                    <img src="images/home/bdm_hop.png" alt="images">
+                                    <img src="@(Model.BDM_Staff.Image)" alt="images">
                                 </div>
                                 <div class="category">
                                     design
@@ -238,7 +235,7 @@
                             </div>
                             <div class="author-info">
                                 <div class="avatar">
-                                    <img src="images/home/bmd_hop.png" alt="images">
+                                    <img src="@(Model.BMD_Staff.Image)" alt="images">
                                 </div>
                                 <div class="category">
                                     mobile game
@@ -321,7 +318,7 @@
                 @*bind db*@
                 <div class="videobox">
                     <a class="fancybox" data-type="iframe" href="https://www.youtube.com/embed/X9mveMYAzDY">
-                        <img src="images/home/5.jpg" alt="images">
+                        <img src="@(Model.About_Banner.ImagePath)" alt="images">
                     </a>
                     <div class="elip-top">
                         <img src="images/home/42.png" alt="images">

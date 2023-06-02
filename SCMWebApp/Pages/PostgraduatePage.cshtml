@@ -59,14 +59,14 @@
                                 <div class="author-price">
                                     <div class="author">
                                         <div class="avatar">
-                                            <img src="images/course-single/2.jpg" alt="images">
+                                            <img src="@(Model.SPSStaff.Image)" alt="images">
                                         </div>
                                         <div class="info">
                                             <div class="name">
-                                                <b>Assoc Prof. Dr. Mohd Zainal Munshid Bin Harun</b>
+                                                <b>@(Model.SPSStaff.Name)</b>
                                             </div>
                                             <div class="job">
-                                                Dean, School of Postgraduate Studies
+                                                @(Model.SPSStaff.Position.Role)
                                             </div>
                                         </div>
                                     </div>
