@@ -12,54 +12,76 @@
     <div class="rev_slider_wrapper fullwidthbanner-container">
         <div id="rev-slider1" class="rev_slider fullwidthabanner">
             <ul>
-                <!-- Slide 1 -->
-                <li data-transition="random">
-                    <!-- Main Image -->
-                    <img class="imgdim" src="images/header/02_clear.png" alt="" data-bgposition="center center" data-no-retina>
-                    <div class="overlay"></div>
+                <!-- Slider -->
+                @foreach (var banner in Model.Banners)
+                {
+                    <!-- Slide 1 -->
+                    <li data-transition="random">
+                        <!-- Main Image -->
+                        <img class="imgdim" src="@(banner.ImagePath)" alt="" data-bgposition="center center" data-no-retina>
+                        <div class="overlay"></div>
 
-                    <!-- Layers -->
-                    <div class="tp-caption tp-resizeme education"
-                         data-x="['left','left','left','center']" data-hoffset="['0','4','4','15']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['-113','-80','-70','-70']"
-                         data-fontsize="['70','70','50','30']"
-                         data-lineheight="['90','90','70','50']"
-                         data-width="full"
-                         data-height="none"
-                         data-whitespace="normal"
-                         data-transform_idle="o:1;"
-                         data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                         data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                         data-mask_in="x:0px;y:[100%];"
-                         data-mask_out="x:inherit;y:inherit;"
-                         data-start="1000"
-                         data-splitin="none"
-                         data-splitout="none"
-                         data-responsive_offset="on">
-                        <div class="education-text text-white">Education for all</div>
-                    </div>
+                        <!-- Layers -->
+                        <div class="tp-caption tp-resizeme education"
+                             data-x="['left','left','left','center']" data-hoffset="['0','4','4','15']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['-113','-80','-70','-70']"
+                             data-fontsize="['70','70','50','30']"
+                             data-lineheight="['90','90','70','50']"
+                             data-width="full"
+                             data-height="none"
+                             data-whitespace="normal"
+                             data-transform_idle="o:1;"
+                             data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                             data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                             data-mask_in="x:0px;y:[100%];"
+                             data-mask_out="x:inherit;y:inherit;"
+                             data-start="1000"
+                             data-splitin="none"
+                             data-splitout="none"
+                             data-responsive_offset="on">
+                            <div class="education-text text-white">Education for all</div>
+                        </div>
 
-                    <div class="tp-caption tp-resizeme text-white complete text-edukin"
-                         data-x="['left','left','left','center']" data-hoffset="['0','4','4','15']"
-                         data-y="['middle','middle','middle','middle']" data-voffset="['-22','-5','-10','-10']"
-                         data-fontsize="['17','17','15','14']"
-                         data-lineheight="['30','30','26','22']"
-                         data-width="full"
-                         data-height="none"
-                         data-whitespace="normal"
-                         data-transform_idle="o:1;"
-                         data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                         data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-                         data-mask_in="x:0px;y:[100%];"
-                         data-mask_out="x:inherit;y:inherit;"
-                         data-start="1000"
-                         data-splitin="none"
-                         data-splitout="none"
-                         data-responsive_offset="on"
-                         data-paddingright="['550','155','50','2']">
-                        Complete your educution record collection. Discover Educution's full discography. Education is not key to success in life.
-                    </div>
+                        <div class="tp-caption tp-resizeme text-white complete text-edukin"
+                             data-x="['left','left','left','center']" data-hoffset="['0','4','4','15']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['-22','-5','-10','-10']"
+                             data-fontsize="['17','17','15','14']"
+                             data-lineheight="['30','30','26','22']"
+                             data-width="full"
+                             data-height="none"
+                             data-whitespace="normal"
+                             data-transform_idle="o:1;"
+                             data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                             data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                             data-mask_in="x:0px;y:[100%];"
+                             data-mask_out="x:inherit;y:inherit;"
+                             data-start="1000"
+                             data-splitin="none"
+                             data-splitout="none"
+                             data-responsive_offset="on"
+                             data-paddingright="['550','155','50','2']">
+                            Complete your educution record collection. Discover Educution's full discography. Education is not key to success in life.
+                        </div>
 
+                        <div class="tp-caption"
+                             data-x="['left','left','left','center']" data-hoffset="['0','4','4','15']"
+                             data-y="['middle','middle','middle','middle']" data-voffset="['88','80','60','70']"
+                             data-width="full"
+                             data-height="none"
+                             data-whitespace="normal"
+                             data-transform_idle="o:1;"
+                             data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                             data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                             data-mask_in="x:0px;y:[100%];"
+                             data-mask_out="x:inherit;y:inherit;"
+                             data-start="1000"
+                             data-splitin="none"
+                             data-splitout="none"
+                             data-responsive_offset="on"
+                             data-paddingtop="['50','50','50','50']"
+                             data-paddingbottom="['50','50','50','50']">
+                            <a href="#" class="btn btn-styl1">Read More</a> <a href="#" class="btn btn-styl2"><i class="fa fa-play" aria-hidden="true"></i></a>
+                        </div>
                     <div class="tp-caption"
                          data-x="['left','left','left','center']" data-hoffset="['0','4','4','15']"
                          data-y="['middle','middle','middle','middle']" data-voffset="['88','80','60','70']"

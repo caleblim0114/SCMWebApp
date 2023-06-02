@@ -4,6 +4,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>e8e2709f-73ab-4732-b3d3-5a21ad23bec0</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SCMWebApp.Shared\SCMWebApp.Shared.csproj" />
+  </ItemGroup>
 
 </Project>
