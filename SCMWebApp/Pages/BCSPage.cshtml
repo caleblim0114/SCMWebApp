@@ -1,0 +1,362 @@
+﻿@page "/bcs"
+@model SCMWebApp.Pages.BCSPageModel
+@{
+    ViewData["Title"] = "BCS page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edukin</title>
+
+    <!-- Mobile Specific Metas-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="stylesheet/bootstrap.css">
+
+    <!-- Template Style-->
+    <link rel="stylesheet" href="stylesheet/font-awesome.css">
+    <link rel="stylesheet" href="stylesheet/animate.css">
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="stylesheet" href="stylesheet/shortcodes.css">
+    <link rel="stylesheet" href="stylesheet/jquery-fancybox.css">
+    <link rel="stylesheet" href="stylesheet/responsive.css">
+    <link rel="stylesheet" href="stylesheet/flexslider.css">
+    <link rel="stylesheet" href="stylesheet/owl.theme.default.min.css">
+    <link rel="stylesheet" href="stylesheet/owl.carousel.min.css">
+    <link rel="stylesheet" href="stylesheet/jquery.mCustomScrollbar.min.css">
+
+    <link href="icon/favicon.ico" rel="shortcut icon">
+</head>
+<body>
+    <div id="loading-overlay">
+        <div class="loader"></div>
+    </div>
+    <div class="bg-header">
+        <div class="flat-header-blog">
+            <div class="page-title page-title-blog">
+                <div class="page-title-inner">
+                    <div class="breadcrumbs breadcrumbs-blog text-left">
+                        <div class="container">
+                            <div class="breadcrumbs-wrap">
+                                <ul class="breadcrumbs-inner">
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/course">Course</a></li>
+                                    <li><a href="/bcs">Computer Science</a></li>
+                                </ul>
+                                <div class="title">
+                                    Bachelor of Computer Science(Hons)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- bg-header -->
+    <div class="courses-single-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="content-page-wrap clearfix">
+                        <div class="course-single">
+                            <div class="featured-post">
+                                <div class="entry-image">
+                                    <div class="videobox">
+                                        <a class="fancybox" data-type="iframe" href="https://www.youtube.com/embed/X9mveMYAzDY">
+                                            <img src="images/course-single/1.jpg" alt="images">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="title">
+                                    <a href="/bcs">Bachelor of Computer Science</a>
+                                </div>
+                                <div class="author-price">
+                                    <div class="author">
+                                        <div class="avatar">
+                                            <img src="images/course-single/2.jpg" alt="images">
+                                        </div>
+                                        <div class="info">
+                                            <div class="name">
+                                                <a href="#">Dr. Chew Kim Mey</a>
+                                            </div>
+                                            <div class="job">
+                                                Head of Programme, <br />School of Computing and Creative Media
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-wrap price-course-single">
+                                        <div class="btn-buynow">
+                                            <a href="mailto:chew.kim.mey@uts.edu.my?subject=Enquiry">Contact Me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flat-tabs">
+                            <ul class="tab-title type1 clearfix">
+                                <li class="item-title  overview">
+                                    <span class="inner">OVERVIEW</span>
+                                </li>
+                                <li class="item-title curriculum">
+                                    <span class="inner">TUITION FEE</span>
+                                </li>
+                                <li class="item-title instructor">
+                                    <span class="inner">PROGRAMME</span>
+                                </li>
+                            </ul>
+                            <div class="tab-content-wrap">
+                                <div class="tab-content">
+                                    <div class="item-content">
+                                        <div class="question-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Course Overview</a>
+                                            </div>
+                                            <p>
+                                                Computer Science is one of the popular course to be taken. Our university provides graduands three major paths in their future career which are Software Development, Cyber Security and IoT.
+                                            </p>
+                                        </div>
+                                        <div class="certificate-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Objectives</a>
+                                            </div>
+                                            <div class="certificate">
+                                                <div class="certificate-wrap">
+                                                    <ul class="list-certificate">
+                                                        <li>
+                                                            Graduates with good level of knowledge and competency skills will be employed or self-employed in relevant software engineering fields; and with appropriate attitudes will enable them to have successful careers.
+                                                        </li>
+                                                        <li>
+                                                            Graduates will acquire abilities for effective communication, collaborative working in diverse teams, and continual development through professional involvement.
+                                                        </li>
+                                                        <li>
+                                                            Graduates will pursue lifelong learning in order to contribute to the advancement of information technology and computer science professions and related contemporary issues.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="images-certificate">
+                                                    <img src="images/course-single/3.jpg" alt="images">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="requirements-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Requirements</a>
+                                            </div>
+                                            <ul class="request">
+                                                <li>
+                                                    Pass Matriculation/Pre-U/Foundation from recognized institutions with minimum CGPA 2.0 and a credit in Additional Mathematics OR Mathematics and one of the subjects in Science/Technology/Engineering at SPM level; or
+                                                </li>
+                                                <li>
+                                                    Pass STPM/A-level with Grade C (GP 2.0) in any two (2) subjects and a credit in Additional Mathematics OR Mathematics and one of the subjects in Science/Technology/Engineering at SPM level; or
+                                                </li>
+                                                <li>
+                                                    Pass STPM in Science Stream with a minimum Grade C (GP 2.0) in a Mathematics subject and a Science/ICT subject; or
+                                                </li>
+                                                <li>
+                                                    *Diploma (Computer Science/Software Engineering/Information Technology/Information Systems) or equivalent with a minimum CGPA 2.5; or
+                                                </li>
+                                                <li>
+                                                    *Diploma in Science and Technology with minimum CGPA of 2.5.
+                                                </li>
+                                                <li>
+                                                    Pass UEC with a minimum Grade B in 5 subjects including a Mathematics subject that is equivalent to the Additional Mathematics at SPM level; or
+                                                </li>
+                                                <li>
+                                                    Other equivalent qualifications recognized by the Malaysian Government.
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="price-course-single">
+                                            <div class="btn-buynow">
+                                                <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="item-content">
+                                        <div class="question-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Tuition Fee</a>
+                                            </div>
+                                            <a href="https://www.uts.edu.my/tuition-fees/">View Programme Fee Here</a>
+                                        </div>
+                                        <div class="access-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Need Financial Assistance?</a>
+                                            </div>
+                                            <a href="https://uts.edu.my/wp-content/uploads/2019/04/financial-assistance-apr16-2019.pdf">Click Me</a>
+                                        </div>
+                                        <div class="certificate-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Study Loan</a>
+                                            </div>
+                                            <p>
+                                                Study loan such as <b>PTPTN</b> and <b>MARA</b> are available in UTS.
+                                            </p>
+                                        </div>
+
+                                        <div class="requirements-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Any Enquiries?</a>
+                                            </div>
+                                            <ul class="request">
+                                                <li>
+                                                    Contact us admin <b>(+6) 084-367300 </b>
+                                                </li>
+                                                <li>
+                                                    Contact us admin <b>enquiry@uts.edu.my</b>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="price-course-single">
+                                            <div class="btn-buynow">
+                                                <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="item-content">
+                                        <div class="certificate">
+                                            <div class="certificate-wrap">
+                                                <p>
+                                                    <b>Programme Structure</b>
+                                                </p>
+                                                <ul class="list-certificate">
+                                                    <li>
+                                                        <a href="#">Batch BCS2109 and before</a>
+                                                    </li>                                                    
+                                                    <li>
+                                                        <a href="https://scm.uts.edu.my/wp-content/uploads/2023/04/2023BCS-Structure-DFinal.pdf">Batch BCS2202 and onwards</a>
+                                                    </li>
+                                                </ul> <br/>
+                                                <div class="price-course-single">
+                                                    <div class="btn-buynow">
+                                                        <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="sidebar-right">
+                        <div class="widget widget-features">
+                            <div class="widget-title">
+                                Course Features
+                            </div>
+                            <div class="content">
+                                <ul class="features">
+                                    <li>
+                                        <a href="#">MQA</a>
+                                        <span>MQA/PA 4984</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Duration</a>
+                                        <span>3.5 Years</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Intakes</a>
+                                        <span>February & September</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Category</a>
+                                        <span>Technology</span>
+                                    </li>
+                                </ul>
+                                <div class="share-via">
+                                    <div class="title">
+                                        Share via
+                                    </div>
+                                    <ul class="social-media">
+                                        <li><a href="https://web.facebook.com/utsofficialswk"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.instagram.com/utscm/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.uts.edu.my/contact-2-2/"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                        <li><a href="mailto:enquiry@uts.edu.my?subject=Enquiry"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="related-course related-course-single">
+                            <div class="title">
+                                Visit Our Main Website
+                            </div>
+                            <div class="related-course-wrap client-style3">
+                                <div class="flat-carousel-box data-effect clearfix" data-gap="30" data-column="1" data-column2="1" data-column3="1" data-column4="1" data-dots="false" data-auto="false" data-nav="false">
+                                    <div class="owl-carousel">
+                                        <div class="flat-course">
+                                            <div class="featured-post">
+                                                <div class="entry-image">
+                                                    <img src="images/header/03_clear.png" alt="images">
+                                                </div>
+                                            </div>
+                                            <div class="course-content clearfix">
+                                                <div class="wrap-course-content">
+                                                    <h4>
+                                                        <a href="https://www.uts.edu.my/">University of Technology Sarawak</a>
+                                                    </h4>
+                                                    <p>
+                                                        First ever university published on 1 April 2023 in Sibu town.
+                                                    </p>
+                                                    <div class="author-info">
+                                                        <div class="author-name">
+                                                            Sibu, Sarawak.
+                                                        </div>
+                                                        <div class="enroll">
+                                                            <a href="https://www.uts.edu.my/">Visit</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <br/>
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/rev-slider.js"></script>
+    <script src="javascript/plugins.js"></script>
+    <script src="javascript/jquery-countTo.js"></script>
+    <script src="javascript/jquery-ui.js"></script>
+    <script src="javascript/jquery-fancybox.js"></script>
+    <script src="javascript/flex-slider.min.js"></script>
+    <script src="javascript/scroll-img.js"></script>
+    <script src="javascript/owl.carousel.min.js"></script>
+    <script src="javascript/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="javascript/parallax.js"></script>
+    <script src="javascript/jquery-isotope.js"></script>
+    <script src="javascript/equalize.min.js"></script>
+    <script src="javascript/main.js"></script>
+
+    <!-- slider -->
+    <script src="rev-slider/js/jquery.themepunch.tools.min.js"></script>
+    <script src="rev-slider/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.actions.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.carousel.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.kenburn.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.layeranimation.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.migration.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.navigation.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.parallax.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.slideanims.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.video.min.js"></script>
+</body>
+</html>
