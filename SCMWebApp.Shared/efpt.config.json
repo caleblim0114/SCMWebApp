@@ -1,0 +1,61 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "SCMWebApp.DatabaseContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "SCMWebApp.Shared",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Application]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Banner]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BannerType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Position]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Programme]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Staff]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "SCMWebApp.Database\\SCMWebApp.Database.sqlproj",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}
