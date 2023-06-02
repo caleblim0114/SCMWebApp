@@ -1,13 +1,14 @@
-﻿@page "/bcs"
-@model SCMWebApp.Pages.BCSPageModel
+﻿@page "/course"
+@model SCMWebApp.Pages.UndergraduatePageModel
 @{
-    ViewData["Title"] = "BCS page";
+    ViewData["Title"] = "Course page";
 }
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>UTS | BCS</title>
+    <title>UTS | Undergraduate Course</title>
 
     <link href="icon/favicon.ico" rel="shortcut icon">
 </head>
@@ -25,10 +26,9 @@
                                 <ul class="breadcrumbs-inner">
                                     <li><a href="/">Home</a></li>
                                     <li><a href="/course">Course</a></li>
-                                    <li><a href="/bcs">Computer Science</a></li>
                                 </ul>
                                 <div class="title">
-                                    Bachelor of Computer Science(Hons)
+                                    Available Courses
                                 </div>
                             </div>
                         </div>
@@ -47,14 +47,14 @@
                                 <div class="entry-image">
                                     <div class="videobox">
                                         <a class="fancybox" data-type="iframe" href="https://www.youtube.com/embed/X9mveMYAzDY">
-                                            <img src="images/course-single/1.jpg" alt="images">
+                                            <img src="images/home/5.jpg" alt="images">
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="content">
                                 <div class="title">
-                                    <a href="/bcs">Bachelor of Computer Science</a>
+                                    <a href="#">School of Computing and Creative Media</a>
                                 </div>
                                 <div class="author-price">
                                     <div class="author">
@@ -63,16 +63,11 @@
                                         </div>
                                         <div class="info">
                                             <div class="name">
-                                                <a href="#">Dr. Chew Kim Mey</a>
+                                                <b>Assoc. Prof. Ts. Dr. Alan Ting Huong Yong</b>
                                             </div>
                                             <div class="job">
-                                                Head of Programme, <br />School of Computing and Creative Media
+                                                Dean, School of Computing and Creative Media
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="price-wrap price-course-single">
-                                        <div class="btn-buynow">
-                                            <a href="mailto:chew.kim.mey@uts.edu.my?subject=Enquiry">Contact Me</a>
                                         </div>
                                     </div>
                                 </div>
@@ -84,10 +79,7 @@
                                     <span class="inner">OVERVIEW</span>
                                 </li>
                                 <li class="item-title curriculum">
-                                    <span class="inner">TUITION FEE</span>
-                                </li>
-                                <li class="item-title instructor">
-                                    <span class="inner">PROGRAMME</span>
+                                    <span class="inner">COURSE</span>
                                 </li>
                             </ul>
                             <div class="tab-content-wrap">
@@ -95,10 +87,10 @@
                                     <div class="item-content">
                                         <div class="question-sg text clearfix">
                                             <div class="title">
-                                                <a href="#">Course Overview</a>
+                                                <a href="#">Overview</a>
                                             </div>
                                             <p>
-                                                Computer Science is one of the popular course to be taken. Our university provides graduands three major paths in their future career which are Software Development, Cyber Security and IoT.
+                                                Main objective for School of Computing and Creative Media is to produce software engineers capable of fulfilling the professional demands in highly competitive global market with confidence, outstanding ethical and moral values.
                                             </p>
                                         </div>
                                         <div class="certificate-sg text clearfix">
@@ -119,85 +111,17 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <div class="images-certificate">
-                                                    <img src="images/course-single/3.jpg" alt="images">
-                                                </div>
                                             </div>
                                         </div>
-
-                                        <div class="requirements-sg text clearfix">
+                                        <div class="description-single text clearfix">
                                             <div class="title">
-                                                <a href="#">Requirements</a>
-                                            </div>
-                                            <ul class="request">
-                                                <li>
-                                                    Pass Matriculation/Pre-U/Foundation from recognized institutions with minimum CGPA 2.0 and a credit in Additional Mathematics OR Mathematics and one of the subjects in Science/Technology/Engineering at SPM level; or
-                                                </li>
-                                                <li>
-                                                    Pass STPM/A-level with Grade C (GP 2.0) in any two (2) subjects and a credit in Additional Mathematics OR Mathematics and one of the subjects in Science/Technology/Engineering at SPM level; or
-                                                </li>
-                                                <li>
-                                                    Pass STPM in Science Stream with a minimum Grade C (GP 2.0) in a Mathematics subject and a Science/ICT subject; or
-                                                </li>
-                                                <li>
-                                                    *Diploma (Computer Science/Software Engineering/Information Technology/Information Systems) or equivalent with a minimum CGPA 2.5; or
-                                                </li>
-                                                <li>
-                                                    *Diploma in Science and Technology with minimum CGPA of 2.5.
-                                                </li>
-                                                <li>
-                                                    Pass UEC with a minimum Grade B in 5 subjects including a Mathematics subject that is equivalent to the Additional Mathematics at SPM level; or
-                                                </li>
-                                                <li>
-                                                    Other equivalent qualifications recognized by the Malaysian Government.
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="price-course-single">
-                                            <div class="btn-buynow">
-                                                <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-content">
-                                    <div class="item-content">
-                                        <div class="question-sg text clearfix">
-                                            <div class="title">
-                                                <a href="#">Tuition Fee</a>
-                                            </div>
-                                            <a href="https://www.uts.edu.my/tuition-fees/">View Programme Fee Here</a>
-                                        </div>
-                                        <div class="access-sg text clearfix">
-                                            <div class="title">
-                                                <a href="#">Need Financial Assistance?</a>
-                                            </div>
-                                            <a href="https://uts.edu.my/wp-content/uploads/2019/04/financial-assistance-apr16-2019.pdf">Click Me</a>
-                                        </div>
-                                        <div class="certificate-sg text clearfix">
-                                            <div class="title">
-                                                <a href="#">Study Loan</a>
+                                                <a href="#">Description</a>
                                             </div>
                                             <p>
-                                                Study loan such as <b>PTPTN</b> and <b>MARA</b> are available in UTS.
+                                                Are you a tech-person? You're in the right place! Our School of Computing and Creative Media provides you a great opportunities to excel in your future! Contact us now!
                                             </p>
                                         </div>
 
-                                        <div class="requirements-sg text clearfix">
-                                            <div class="title">
-                                                <a href="#">Any Enquiries?</a>
-                                            </div>
-                                            <ul class="request">
-                                                <li>
-                                                    Contact us admin <b>(+6) 084-367300 </b>
-                                                </li>
-                                                <li>
-                                                    Contact us admin <b>enquiry@uts.edu.my</b>
-                                                </li>
-                                            </ul>
-                                        </div>
-
                                         <div class="price-course-single">
                                             <div class="btn-buynow">
                                                 <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
@@ -207,24 +131,45 @@
                                 </div>
                                 <div class="tab-content">
                                     <div class="item-content">
-                                        <div class="certificate">
-                                            <div class="certificate-wrap">
-                                                <p>
-                                                    <b>Programme Structure</b>
-                                                </p>
-                                                <ul class="list-certificate">
-                                                    <li>
-                                                        <a href="#">Batch BCS2109 and before</a>
-                                                    </li>                                                    
-                                                    <li>
-                                                        <a href="https://scm.uts.edu.my/wp-content/uploads/2023/04/2023BCS-Structure-DFinal.pdf">Batch BCS2202 and onwards</a>
-                                                    </li>
-                                                </ul> <br/>
-                                                <div class="price-course-single">
-                                                    <div class="btn-buynow">
-                                                        <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
-                                                    </div>
+                                        <div class="requirements-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Our Courses</a>
+                                            </div>
+                                            <ul class="request">
+                                                <li>
+                                                    <a href="/bcs">Bachelor of Computer Science(Hons)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Bachelor of Arts(Hons) in Industrial Design</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Bachelor of Arts(Hons) in Creative Digital Media</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Bachelor of Mobile Game Development(Hons</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="certificate-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Intakes Available</a>
+                                            </div>
+                                            <div class="certificate">
+                                                <div class="certificate-wrap">
+                                                    <ul class="list-certificate">
+                                                        <li>
+                                                            February Intake
+                                                        </li>
+                                                        <li>
+                                                            September Intake
+                                                        </li>
+                                                    </ul>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="price-course-single">
+                                            <div class="btn-buynow">
+                                                <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -242,16 +187,12 @@
                             <div class="content">
                                 <ul class="features">
                                     <li>
-                                        <a href="#">MQA</a>
-                                        <span>MQA/PA 4984</span>
+                                        <a href="#">Certificate</a>
+                                        <span>Yes</span>
                                     </li>
                                     <li>
-                                        <a href="#">Duration</a>
-                                        <span>3.5 Years</span>
-                                    </li>
-                                    <li>
-                                        <a href="#">Intakes</a>
-                                        <span>February & September</span>
+                                        <a href="/course">Education Level</a>
+                                        <span>Degree</span>
                                     </li>
                                     <li>
                                         <a href="#">Category</a>
@@ -310,7 +251,36 @@
                     </div>
                 </div>
             </div>
-        </div> <br/>
+        </div>
+    </div><!-- courses-single -->
+    <div class="cta-cr parallax parallax3">
+        <div class="overlay183251"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12">
+                    <div class="cta-content">
+                        <div class="caption">How to start your teaching?</div>
+                        <h3>
+                            Starting your journey with us? Contact us for further guidance!
+                        </h3>
+                        <div class="btn-about-become">
+                            <a href="mailto:enquiry@uts.edu.my?subject=Enquiry">Become a Teacher</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
+                    <div class="cta-information">
+                        <div class="phone">
+                            +(6) 084-367429
+                        </div>
+                        <div class="email">
+                            scm@uts.edu.my
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- cta-cr -->
     <script src="javascript/jquery.min.js"></script>
     <script src="javascript/rev-slider.js"></script>
     <script src="javascript/plugins.js"></script>

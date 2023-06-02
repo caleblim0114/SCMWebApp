@@ -2148,12 +2148,12 @@ input::-webkit-input-placeholder {
     letter-spacing: 0.4px;
 }
 
-.iconbox-benefit-style1 .iconbox-content.img-one h3{
+.iconbox-benefit-style1 .iconbox-content.img-one h3 {
     margin-top: 25px;
     margin-bottom: 18px;
 }
 .iconbox-benefit-style1 .iconbox-content.img-two h3{
-    margin-top: 26px;
+    margin-top: 25px;
     margin-bottom: 18px;
 }
 .iconbox-benefit-style1 .iconbox-content.img-three h3{
@@ -2161,11 +2161,11 @@ input::-webkit-input-placeholder {
     margin-bottom: 15px;
 }
 .iconbox-benefit-style1 .iconbox-content.img-four h3{
-    margin-top: 25px;
-    margin-bottom: 14px;
+    margin-top: 42px;
+    margin-bottom: 15px;
 }
-.iconbox-benefit-style1 .iconbox-content a{
-    color: #fff;
+.iconbox-benefit-style1 .iconbox-content a {
+    color: grey;
 }
 
 .iconbox-benefit-style1 .iconbox{

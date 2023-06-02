@@ -431,8 +431,8 @@
 .imagebox-courses-type1 .author-info .border-bt{
 	width: 100%;
     height: 1px;
-    position: absolute;
-    bottom: 81px;
+    position: fixed;
+    bottom: 50px;
     background-color: rgba(235, 235, 235, 0.3);
 }
 .imagebox-courses-type1 .author-info .evaluate .price{
@@ -777,7 +777,7 @@
 
 /*flat-introduce*/
 .flat-introduce .bg{
-    background: #fef9f0;
+    background: gray;
     height: 100%;
     width: 59.7%;
     position: absolute;
