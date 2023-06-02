@@ -6,62 +6,81 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport"
-            content="width=device-width, initial-scale=1">
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
 
-        <style>
-            body {font-family: Arial, Helvetica, sans-serif;} * {box-sizing: border-box}
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
 
-            .open-button {
-                background-color: #555;
-                color: white;
-                padding: 16px 20px;
-                border: none;
-                cursor: pointer;
-                opacity: 0.8;
-                position: fixed;
-                bottom: 23px;
-                right: 28px;
-                width: 280px;
-            }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
 
-            .form-popup {
-                display: none;
-                position: fixed;
-                bottom: 0;
-                right: 15px;
-                border: 3px solid #f1f1f1;
-                z-index: 9;
-            }
+        .my-image {
+            height: 50px;
+            max-width: 150px;
+        }
 
-            .form-container {
-                max-width: 300px;
-                padding: px;
-                background-color: white;
-            }
+        .my-delete-button {
+            background-color: #ff6e6e;
+            border: 0px;
+            color: white;
+            border-radius: 8px;
+            height: 45px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
 
-            .form-container input[type=text],
-            .form-container input[type=password] {
-                width: 100%;
-                padding: 15px;
-                margin: 5px 0 22px 0;
-                border: none;
-                background: #f1f1f1;
-            }
+    <div>
+        <h1>@ViewData["Title"]</h1>
+    </div>
 
-            .form-container input[type=text]:focus,
-            .form-container input[type=password]:focus
-        </style>
-    </head>
+    <table>
+        <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Image Type</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        @foreach (var banner in Model.Banners)
+        {
+            <tr>
+                <td>
+                    <img src="@(banner.ImagePath)" class="my-image">
+                </td>
+                <td>@(banner.Title)</td>
+                <td>@(banner.Description)</td>
+                <td>@(banner.BannerType.Name)</td>
+                <td>
+                    <a href="path?imageid=@banner.Id">Edit</a>
+                </td>
+                <td>
+                    <button class="my-delete-button">Delete</button>
+                </td>
+            </tr>
+        }
+    </table>
 
-    <body>
-
-    </body>
+</body>
 </html>
-<div>
-    <h1>@ViewData["Title"]</h1>
 
-    <p>Use this page to view the uploaded media.</p>
-</div>
+@*<a href="path?imageid=@banner.Id">Edit</a>
 
+onget(int imageid)*@
+
+@*<a href="path/@banner.Id">Edit</a>
+
+"{id}"
+onget(int id)*@

@@ -27,6 +27,7 @@ namespace SCMWebApp.AdminPanel.Pages
 
         public void OnGet()
         {
+            
         }
 
         public async Task<IActionResult> OnPostAsync()

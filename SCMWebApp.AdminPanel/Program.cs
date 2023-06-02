@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddControllers();
 
 builder.Services.AddSingleton(builder.Configuration);
 builder.Services.AddDbContext<SCMWebAppDatabaseContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DBConnectionString")));
@@ -28,6 +29,9 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapRazorPages();
+app.UseEndpoints(endpoints => {
+    endpoints.MapRazorPages();
+    endpoints.MapControllers();
+});
 
 app.Run();

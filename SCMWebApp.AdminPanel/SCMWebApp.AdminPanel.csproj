@@ -15,4 +15,8 @@
     <ProjectReference Include="..\SCMWebApp.Shared\SCMWebApp.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>
