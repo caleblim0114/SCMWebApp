@@ -1647,7 +1647,7 @@ input::-webkit-input-placeholder {
 
 /*footer*/
 .footer-type1{
-    background-image: url(../images/footer/01.png);
+    background-image: url(../images/footer/darkgray.jpg);
     background-size: cover;
 }
 .footer-type1 .form-send-email{
@@ -2520,8 +2520,13 @@ input::-webkit-input-placeholder {
 .flat-benefit.style22 .iconbox-content-style22 p{
     padding-right: 70px;
 }
-.flat-benefit.style22 .featured-post img{
+.flat-benefit.style22{
     width: 100%;
+}
+.featured-post img {
+    width: 100%;
+    filter: brightness(60%);
+    border-radius: 10px;
 }
 
 .testimonial-style2{
@@ -3633,6 +3638,7 @@ input::-webkit-input-placeholder {
 .online-courses-style5 .imagebox-courses-type1{
     margin-bottom: 0 !important;
 }
+
 .online-courses-style5 .online-courses-wrap .owl-carousel .owl-stage-outer{
     padding-top: 35px;
 }
@@ -3833,7 +3839,7 @@ input::-webkit-input-placeholder {
     top: -17%;
     left: -20.4%;
 }
-.testimonial-style5 .col-left .featured-post img{
+.testimonial-style5 .col-left{
     border-radius: 20px;
 }
 .testimonial-style5 .col-right{

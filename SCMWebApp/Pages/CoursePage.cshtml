@@ -1,0 +1,332 @@
+﻿@page "/course"
+@model SCMWebApp.Pages.CoursePageModel
+@{
+    ViewData["Title"] = "Course page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SCM)Course</title>
+
+    <!-- Mobile Specific Metas-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="stylesheet/bootstrap.css">
+
+    <!-- Template Style-->
+    <link rel="stylesheet" href="stylesheet/font-awesome.css">
+    <link rel="stylesheet" href="stylesheet/animate.css">
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="stylesheet" href="stylesheet/shortcodes.css">
+    <link rel="stylesheet" href="stylesheet/jquery-fancybox.css">
+    <link rel="stylesheet" href="stylesheet/responsive.css">
+    <link rel="stylesheet" href="stylesheet/flexslider.css">
+    <link rel="stylesheet" href="stylesheet/owl.theme.default.min.css">
+    <link rel="stylesheet" href="stylesheet/owl.carousel.min.css">
+    <link rel="stylesheet" href="stylesheet/jquery.mCustomScrollbar.min.css">
+
+    <link href="icon/favicon.ico" rel="shortcut icon">
+</head>
+<body>
+    <div id="loading-overlay">
+        <div class="loader"></div>
+    </div>
+    <div class="bg-header">
+        <div class="flat-header-blog">
+            <div class="page-title page-title-blog">
+                <div class="page-title-inner">
+                    <div class="breadcrumbs breadcrumbs-blog text-left">
+                        <div class="container">
+                            <div class="breadcrumbs-wrap">
+                                <ul class="breadcrumbs-inner">
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/course">Course</a></li>
+                                </ul>
+                                <div class="title">
+                                    Available Courses
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- bg-header -->
+    <div class="courses-single-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="content-page-wrap clearfix">
+                        <div class="course-single">
+                            <div class="featured-post">
+                                <div class="entry-image">
+                                    <div class="videobox">
+                                        <a class="fancybox" data-type="iframe" href="https://www.youtube.com/embed/X9mveMYAzDY">
+                                            <img src="images/home/5.jpg" alt="images">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="title">
+                                    <a href="#">School of Computing and Creative Media</a>
+                                </div>
+                                <div class="author-price">
+                                    <div class="author">
+                                        <div class="avatar">
+                                            <img src="images/course-single/2.jpg" alt="images">
+                                        </div>
+                                        <div class="info">
+                                            <div class="name">
+                                                <b>Assoc. Prof. Ts. Dr. Alan Ting Huong Yong</b>
+                                            </div>
+                                            <div class="job">
+                                                Dean, School of Computing and Creative Media
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flat-tabs">
+                            <ul class="tab-title type1 clearfix">
+                                <li class="item-title  overview">
+                                    <span class="inner">OVERVIEW</span>
+                                </li>
+                                <li class="item-title curriculum">
+                                    <span class="inner">COURSE</span>
+                                </li>
+                            </ul>
+                            <div class="tab-content-wrap">
+                                <div class="tab-content">
+                                    <div class="item-content">
+                                        <div class="question-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Overview</a>
+                                            </div>
+                                            <p>
+                                                Main objective for School of Computing and Creative Media is to produce software engineers capable of fulfilling the professional demands in highly competitive global market with confidence, outstanding ethical and moral values.
+                                            </p>
+                                        </div>
+                                        <div class="certificate-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Objectives</a>
+                                            </div>
+                                            <div class="certificate">
+                                                <div class="certificate-wrap">
+                                                    <ul class="list-certificate">
+                                                        <li>
+                                                            Graduates with good level of knowledge and competency skills will be employed or self-employed in relevant software engineering fields; and with appropriate attitudes will enable them to have successful careers.
+                                                        </li>
+                                                        <li>
+                                                            Graduates will acquire abilities for effective communication, collaborative working in diverse teams, and continual development through professional involvement.
+                                                        </li>
+                                                        <li>
+                                                            Graduates will pursue lifelong learning in order to contribute to the advancement of information technology and computer science professions and related contemporary issues.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description-single text clearfix">
+                                            <div class="title">
+                                                <a href="#">Description</a>
+                                            </div>
+                                            <p>
+                                                Are you a tech-person? You're in the right place! Our School of Computing and Creative Media provides you a great opportunities to excel in your future! Contact us now!
+                                            </p>
+                                        </div>
+
+                                        <div class="price-course-single">
+                                            <div class="btn-buynow">
+                                                <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="item-content">
+                                        <div class="requirements-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Our Courses</a>
+                                            </div>
+                                            <ul class="request">
+                                                <li>
+                                                    <a href="/bcs">Bachelor of Computer Science(Hons)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Bachelor of Arts(Hons) in Industrial Design</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Bachelor of Arts(Hons) in Creative Digital Media</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Bachelor of Mobile Game Development(Hons</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="certificate-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Intakes Available</a>
+                                            </div>
+                                            <div class="certificate">
+                                                <div class="certificate-wrap">
+                                                    <ul class="list-certificate">
+                                                        <li>
+                                                            February Intake
+                                                        </li>
+                                                        <li>
+                                                            September Intake
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="price-course-single">
+                                            <div class="btn-buynow">
+                                                <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="sidebar-right">
+                        <div class="widget widget-features">
+                            <div class="widget-title">
+                                Course Features
+                            </div>
+                            <div class="content">
+                                <ul class="features">
+                                    <li>
+                                        <a href="#">Certificate</a>
+                                        <span>Yes</span>
+                                    </li>
+                                    <li>
+                                        <a href="/course">Education Level</a>
+                                        <span>Degree</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Category</a>
+                                        <span>Technology</span>
+                                    </li>
+                                </ul>
+                                <div class="share-via">
+                                    <div class="title">
+                                        Share via
+                                    </div>
+                                    <ul class="social-media">
+                                        <li><a href="https://web.facebook.com/utsofficialswk"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.instagram.com/utscm/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.uts.edu.my/contact-2-2/"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                        <li><a href="mailto:enquiry@uts.edu.my?subject=Enquiry"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="related-course related-course-single">
+                            <div class="title">
+                                Visit Our Main Website
+                            </div>
+                            <div class="related-course-wrap client-style3">
+                                <div class="flat-carousel-box data-effect clearfix" data-gap="30" data-column="1" data-column2="1" data-column3="1" data-column4="1" data-dots="false" data-auto="false" data-nav="false">
+                                    <div class="owl-carousel">
+                                        <div class="flat-course">
+                                            <div class="featured-post">
+                                                <div class="entry-image">
+                                                    <img src="images/header/03_clear.png" alt="images">
+                                                </div>
+                                            </div>
+                                            <div class="course-content clearfix">
+                                                <div class="wrap-course-content">
+                                                    <h4>
+                                                        <a href="https://www.uts.edu.my/">University of Technology Sarawak</a>
+                                                    </h4>
+                                                    <p>
+                                                        First ever university published on 1 April 2023 in Sibu town.
+                                                    </p>
+                                                    <div class="author-info">
+                                                        <div class="author-name">
+                                                            Sibu, Sarawak.
+                                                        </div>
+                                                        <div class="enroll">
+                                                            <a href="https://www.uts.edu.my/">Visit</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- courses-single -->
+    <div class="cta-cr parallax parallax3">
+        <div class="overlay183251"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12">
+                    <div class="cta-content">
+                        <div class="caption">How to start your teaching?</div>
+                        <h3>
+                            Starting your journey with us? Contact us for further guidance!
+                        </h3>
+                        <div class="btn-about-become">
+                            <a href="mailto:enquiry@uts.edu.my?subject=Enquiry">Become a Teacher</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
+                    <div class="cta-information">
+                        <div class="phone">
+                            +(6) 084-367429
+                        </div>
+                        <div class="email">
+                            scm@uts.edu.my
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- cta-cr -->
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/rev-slider.js"></script>
+    <script src="javascript/plugins.js"></script>
+    <script src="javascript/jquery-countTo.js"></script>
+    <script src="javascript/jquery-ui.js"></script>
+    <script src="javascript/jquery-fancybox.js"></script>
+    <script src="javascript/flex-slider.min.js"></script>
+    <script src="javascript/scroll-img.js"></script>
+    <script src="javascript/owl.carousel.min.js"></script>
+    <script src="javascript/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="javascript/parallax.js"></script>
+    <script src="javascript/jquery-isotope.js"></script>
+    <script src="javascript/equalize.min.js"></script>
+    <script src="javascript/main.js"></script>
+
+    <!-- slider -->
+    <script src="rev-slider/js/jquery.themepunch.tools.min.js"></script>
+    <script src="rev-slider/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.actions.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.carousel.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.kenburn.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.layeranimation.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.migration.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.navigation.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.parallax.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.slideanims.min.js"></script>
+    <script src="rev-slider/js/extensions/extensionsrevolution.extension.video.min.js"></script>
+</body>
+</html>

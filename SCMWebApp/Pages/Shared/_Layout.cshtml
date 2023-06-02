@@ -25,44 +25,87 @@
     <link href="https://scm.uts.edu.my/wp-content/uploads/2018/10/cropped-scm-512x512-192x192.png" rel="shortcut icon">
 </head>
 <body>
-    @RenderBody()
-    <footer id="footer" class="footer-type1">
-        <div class="form-send-email">
-            <div class="container">
-                <form action="#" class="form-send">
-                    <input type="search" placeholder="Enter your email ...">
-                    <button class="btn send-button bg-clff5f60">
-                        Send
-                    </button>
-                </form>
+    @*header*@
+    <div class="wrap-header">
+        <header class="header flat-header lh-header header-style1">
+            <div class="site-header-inner">
+                <div class="container">
+                    <div id="logo" class="logo">
+                        <a href="index.html"><img src="images/logo/02.png" alt="images" style="width: 178px;height: 34px; object-fit: contain;"></a>
+                    </div>
+                    <div class="mobile-button"><span></span></div>
+                    <div class="header-menu">
+                        <nav id="main-nav" class="main-nav">
+                            <ul class="menu">
+                                <li>
+                                    <a href="/">Home</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="/#greeting" style="font-size:11px;">About School</a></li>
+                                        <li class="menu-item"><a href="/#admission" style="font-size:11px;">Admission</a></li>
+                                        <li class="menu-item"><a href="/#link" style="font-size:11px;">Quick Links</a></li>
+                                    </ul><!-- sub-menu -->
+                                </li>
+                                <li>
+                                    <a href="/course">Undergraduate</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="/bcs" style="font-size:11px;">Computer Science</a></li>
+                                        <li class="menu-item"><a href="course-list.html" style="font-size:11px;">Industrial Design</a></li>
+                                        <li class="menu-item"><a href="course-single.html" style="font-size:11px;">Creative Digital Media</a></li>
+                                        <li class="menu-item"><a href="course-single.html" style="font-size:11px;">Mobile Game Development</a></li>
+                                    </ul><!-- sub-menu -->
+                                </li>
+                                <li>
+                                    <a href="course.html">Postgraduate</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="course.html" style="font-size:11px;">Master in Computing</a></li>
+                                        <li class="menu-item"><a href="course-list.html" style="font-size:11px;">Phd. in Computing</a></li>
+                                    </ul><!-- sub-menu -->
+                                </li>
+                                <li>
+                                    <a href="#">Explore</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="https://drac.uts.edu.my/facilities/" style="font-size:11px;">School Facilities</a></li>
+                                        <li class="menu-item"><a href="https://www.uts.edu.my/tuition-fees/" style="font-size:11px;">Tuition Fee</a></li>
+                                        <li class="menu-item"><a href="https://panomatics.com/nextgen/my/ucts/" style="font-size:11px;">Virtual Tour</a></li>
+                                    </ul><!-- sub-menu -->
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
-        </div>
+        </header><!-- header -->
+    </div><!-- wrap-header -->
+
+    @RenderBody()
+
+    @*Footer*@
+    <footer id="footer" class="footer-type1">
         <div id="footer-widget">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-footer">
                         <div class="logo-footer">
-                            <img src="images/logo/04.png" alt="images">
+                            <a href="index.html"><img src="images/logo/02.png" alt="images" style="width: 178px;height: 34px; object-fit: contain;"></a>
                         </div>
                     </div>
                     <div class="col-lg-2 col-company">
                         <h3 class="widget widget-title">
-                            Company
+                            University
                         </h3>
                         <ul class="widget-nav-menu">
-                            <li><a href="#">About Company</a></li>
-                            <li><a href="#">Feature Course</a></li>
-                            <li><a href="#">Careers</a></li>
+                            <li><a href="https://www.uts.edu.my/about-university/">About University</a></li>
+                            <li><a href="https://panomatics.com/nextgen/my/ucts/">Virtual Tour</a></li>
+                            <li><a href="https://drac.uts.edu.my/facilities/">Facilities</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-link">
                         <h3 class="widget widget-title">
-                            Help Links
+                            Services
                         </h3>
                         <ul class="widget-nav-menu">
-                            <li><a href="#">Student Support</a></li>
-                            <li><a href="#">Course Policy</a></li>
-                            <li><a href="#">Register  Key</a></li>
+                            <li><a href="https://uts.edu.my/wp-content/uploads/2019/04/financial-assistance-apr16-2019.pdf">Financial Support</a></li>
+                            <li><a href="https://sdsd.uts.edu.my/sdsd-home-v2/counseling-and-career-guidance/">Couseling with Us</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-course">
@@ -70,9 +113,8 @@
                             Course
                         </h3>
                         <ul class="widget-nav-menu">
-                            <li><a href="#">Wordpres</a></li>
-                            <li><a href="#">Photography</a></li>
-                            <li><a href="#">Learning English</a></li>
+                            <li><a href="#">Undergraduate</a></li>
+                            <li><a href="https://sps.uts.edu.my/">Postgraduate</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-media">
@@ -80,10 +122,10 @@
                             Social Media
                         </h3>
                         <ul class="widget-social-media">
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="https://web.facebook.com/utsofficialswk"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.instagram.com/utscm/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.uts.edu.my/contact-2-2/"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="mailto:enquiry@uts.edu.my?subject=Enquiry"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -96,10 +138,10 @@
                         <div id="copyright">
                             ©
                             <span class="text-year">
-                                2018
+                                2023
                             </span>
                             <span class="text-name">
-                                Roy Design.
+                                Peace_Maker
                             </span>
                             <span class="license">
                                 <a href="#">All Rights Reserved</a>
@@ -108,11 +150,9 @@
                     </div>
                     <div class="bottom-bar-menu">
                         <ul class="bottom-nav">
-                            <li class="menu-item"><a href="#">About Company</a></li>
-                            <li class="menu-item"><a href="#">Privacy Policy</a></li>
-                            <li class="menu-item"><a href="#">Help Center</a></li>
-                            <li class="menu-item"><a href="#">Terms</a></li>
-                            <li class="menu-item"><a href="#">Site Map</a></li>
+                            <li class="menu-item"><a href="https://www.uts.edu.my/pdpa/">Privacy Policy</a></li>
+                            <li class="menu-item"><a href="https://aard.uts.edu.my/">Help Center</a></li>
+                            <li class="menu-item"><a href="https://international.uts.edu.my/terms-copyright-legal-and-disclaimer/">Terms</a></li>
                         </ul>
                     </div>
                 </div>
