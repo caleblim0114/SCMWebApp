@@ -24,6 +24,7 @@ namespace SCMWebApp.Shared.Models
         public virtual DbSet<Position> Position { get; set; }
         public virtual DbSet<Programme> Programme { get; set; }
         public virtual DbSet<Staff> Staff { get; set; }
+        public virtual DbSet<StudentApplication> StudentApplication { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -51,6 +52,13 @@ namespace SCMWebApp.Shared.Models
                     .WithMany(p => p.Staff)
                     .HasForeignKey(d => d.ProgrammeId)
                     .HasConstraintName("FK_Staff_ToProgramme");
+            });
+
+            modelBuilder.Entity<StudentApplication>(entity =>
+            {
+                entity.Property(e => e.PhoneNumber)
+                    .HasMaxLength(10)
+                    .IsFixedLength();
             });
 
             OnModelCreatingPartial(modelBuilder);
