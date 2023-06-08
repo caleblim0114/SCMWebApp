@@ -19,6 +19,12 @@ namespace SCMWebApp.Pages
         [BindProperty]
         public Staff SPSStaff { get; set; } = new();
 
+        [BindProperty]
+        public Banner CourseBanner { get; set; } = new();        
+        
+        [BindProperty]
+        public Banner WebBanner { get; set; } = new();
+
         public async void OnGet()
         {
             try
@@ -31,6 +37,17 @@ namespace SCMWebApp.Pages
                 {
                     SPSStaff = spsStaff;
                 }
+                var courseBanner = _databaseContext.Banner
+                    .Where(x => x.BannerTypeId == 4)
+                    .FirstOrDefault();
+
+                CourseBanner = courseBanner;
+
+                var webBanner = _databaseContext.Banner
+                    .Where(x => x.BannerTypeId == 1)
+                    .FirstOrDefault();
+
+                WebBanner = webBanner;
             }
             catch (Exception ex)
             {

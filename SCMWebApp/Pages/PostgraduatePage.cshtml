@@ -47,7 +47,7 @@
                                 <div class="entry-image">
                                     <div class="videobox">
                                         <a class="fancybox" data-type="iframe" href="https://www.youtube.com/embed/X9mveMYAzDY">
-                                            <img src="images/home/5.jpg" alt="images">
+                                            <img src="@(Model.CourseBanner.ImagePath)" alt="images">
                                         </a>
                                     </div>
                                 </div>
@@ -59,14 +59,14 @@
                                 <div class="author-price">
                                     <div class="author">
                                         <div class="avatar">
-                                            <img src="@(Model.SPSStaff.Image)" alt="images">
+                                            <img src="@(Model.SPSStaff.Image)" alt="images" style="width:65px; height:65px;">
                                         </div>
                                         <div class="info">
                                             <div class="name">
                                                 <b>@(Model.SPSStaff.Name)</b>
                                             </div>
                                             <div class="job">
-                                                @(Model.SPSStaff.Position.Role)
+                                                @(Model.SPSStaff.Position.Role), School of Postgraduate Studies
                                             </div>
                                         </div>
                                     </div>
@@ -209,7 +209,7 @@
                                         <div class="flat-course">
                                             <div class="featured-post">
                                                 <div class="entry-image">
-                                                    <img src="images/header/01.png" alt="images">
+                                                    <img src="@(Model.WebBanner.ImagePath)" alt="images">
                                                 </div>
                                             </div>
                                             <div class="course-content clearfix">

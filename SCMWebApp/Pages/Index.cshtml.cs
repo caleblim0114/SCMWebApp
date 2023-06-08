@@ -32,7 +32,10 @@ namespace SCMWebApp.Pages
         public Staff? BID_Staff { get; set; } = new();
 
         [BindProperty]
-        public Staff? BDM_Staff { get; set; } = new();
+        public Staff? BDM_Staff { get; set; } = new();        
+        
+        [BindProperty]
+        public Staff? SCM_Staff { get; set; } = new();
 
         public async void OnGet()
         {
@@ -66,7 +69,13 @@ namespace SCMWebApp.Pages
                     .Where(x => x.ProgrammeId == 4)
                     .FirstOrDefault();
 
-                BDM_Staff = bdm_staff;
+                BDM_Staff = bdm_staff;                
+                
+                var scm_staff = _databaseContext.Staff
+                    .Where(x => x.ProgrammeId == 5)
+                    .FirstOrDefault();
+
+                SCM_Staff = scm_staff;
 
                 var about_banner = _databaseContext.Banner
                     .Where(x => x.BannerTypeId == 4)
