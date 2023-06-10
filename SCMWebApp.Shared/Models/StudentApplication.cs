@@ -11,5 +11,8 @@ namespace SCMWebApp.Shared.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
+        public int? ProgrammeId { get; set; }
+
+        public virtual Programme Programme { get; set; }
     }
 }

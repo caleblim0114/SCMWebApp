@@ -56,9 +56,10 @@ namespace SCMWebApp.Shared.Models
 
             modelBuilder.Entity<StudentApplication>(entity =>
             {
-                entity.Property(e => e.PhoneNumber)
-                    .HasMaxLength(10)
-                    .IsFixedLength();
+                entity.HasOne(d => d.Programme)
+                    .WithMany(p => p.StudentApplication)
+                    .HasForeignKey(d => d.ProgrammeId)
+                    .HasConstraintName("FK_StudentApplication_ToProgramme");
             });
 
             OnModelCreatingPartial(modelBuilder);

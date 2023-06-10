@@ -11,6 +11,7 @@ namespace SCMWebApp.Shared.Models
         {
             Banner = new HashSet<Banner>();
             Staff = new HashSet<Staff>();
+            StudentApplication = new HashSet<StudentApplication>();
         }
 
         public int Id { get; set; }
@@ -18,5 +19,6 @@ namespace SCMWebApp.Shared.Models
 
         public virtual ICollection<Banner> Banner { get; set; }
         public virtual ICollection<Staff> Staff { get; set; }
+        public virtual ICollection<StudentApplication> StudentApplication { get; set; }
     }
 }

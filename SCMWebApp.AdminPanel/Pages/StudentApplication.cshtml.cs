@@ -6,16 +6,16 @@ using SCMWebApp.Shared.Models;
 
 namespace SCMWebApp.AdminPanel.Pages
 {
-    public class StaffModel : PageModel
+    public class StudentApplicationModel : PageModel
     {
         [BindProperty]
-        public List<Staff> Staffs { get; set; } = new List<Staff>();
+        public List<StudentApplication> Students { get; set; } = new List<StudentApplication>();
 
-        private readonly ILogger<StaffModel> _logger;
+        private readonly ILogger<StudentApplicationModel> _logger;
         private SCMWebAppDatabaseContext _databaseContext;
         private IFileStorageService _fileStorageService;
 
-        public StaffModel(ILogger<StaffModel> logger, SCMWebAppDatabaseContext databaseContext, IFileStorageService fileStorageService)
+        public StudentApplicationModel(ILogger<StudentApplicationModel> logger, SCMWebAppDatabaseContext databaseContext, IFileStorageService fileStorageService)
         {
             _logger = logger;
             _databaseContext = databaseContext;
@@ -24,12 +24,12 @@ namespace SCMWebApp.AdminPanel.Pages
 
         public void OnGet()
         {
-            var staffList = _databaseContext.Staff
-                .Include(x=>x.Position)
+            var studentList = _databaseContext.StudentApplication
+                .Where(x=>x.Email!=null)
                 .Include(x=>x.Programme)
                 .ToList();
 
-            Staffs = staffList;
+            Students = studentList;
         }
     }
 }

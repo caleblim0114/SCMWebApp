@@ -1,0 +1,76 @@
+﻿@page
+@model SCMWebApp.AdminPanel.Pages.StudentApplicationModel
+@{
+    ViewData["Title"] = "Student Application";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .my-image {
+            height: 50px;
+            max-width: 150px;
+        }
+
+        .my-delete-button {
+            background-color: #ff6e6e;
+            border: 0px;
+            color: white;
+            border-radius: 8px;
+            height: 45px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>@ViewData["Title"]</h1>
+    </div>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Phone No.</th>
+            <th>Email</th>
+            <th>Programme</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+
+        @foreach (var student in Model.Students)
+        {
+            <tr>
+                <td>@(student.Name)</td>
+                <td>@(student.PhoneNumber)</td>
+                <td>@(student.Email)</td>
+                <td>@(student.Programme.Name)</td>
+                <td>
+                    <a href="/EditStaff?id=@student.Id">Edit</a>
+                </td>
+                <td>
+                    <a href="/DeleteStaff?id=@student.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+
+</body>
+</html>
