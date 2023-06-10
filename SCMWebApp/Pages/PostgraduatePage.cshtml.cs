@@ -38,7 +38,7 @@ namespace SCMWebApp.Pages
                     SPSStaff = spsStaff;
                 }
                 var courseBanner = _databaseContext.Banner
-                    .Where(x => x.BannerTypeId == 4)
+                    .Where(x => x.BannerTypeId == 1)
                     .FirstOrDefault();
 
                 CourseBanner = courseBanner;

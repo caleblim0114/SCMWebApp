@@ -1404,8 +1404,8 @@ input::-webkit-input-placeholder {
 }
 
 /*blog*/
-.bg-header{
-    background-image: url('../images/header/01.png');
+.bg-header {
+    background-image: url('../images/logo/utsltc.png');
     height: 579px;
     background-repeat: no-repeat;
 }
@@ -2165,7 +2165,7 @@ input::-webkit-input-placeholder {
     margin-bottom: 15px;
 }
 .iconbox-benefit-style1 .iconbox-content a {
-    color: grey;
+    color: #ff5f60;
 }
 
 .iconbox-benefit-style1 .iconbox{

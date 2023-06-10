@@ -20,7 +20,7 @@ namespace SCMWebApp.Pages
         public List<Banner> Banners { get; set; } = new List<Banner>();
 
         [BindProperty]
-        public Banner About_Banner { get; set; }
+        public Banner? About_Banner { get; set; } = new();
 
         [BindProperty]
         public Staff? BMD_Staff { get; set; } = new();
@@ -37,6 +37,9 @@ namespace SCMWebApp.Pages
         [BindProperty]
         public Staff? SCM_Staff { get; set; } = new();
 
+        [BindProperty]
+        public StudentApplication Student { get; set; } = new();
+
         public async void OnGet()
         {
             try
@@ -46,6 +49,12 @@ namespace SCMWebApp.Pages
                     .ToList();
 
                 Banners = banner;
+
+                var about_banner = _databaseContext.Banner
+                    .Where(x => x.BannerTypeId == 4)
+                    .FirstOrDefault();
+
+                About_Banner = about_banner;
 
                 var bmd_staff = _databaseContext.Staff
                     .Where(x => x.ProgrammeId == 1)
@@ -77,12 +86,6 @@ namespace SCMWebApp.Pages
 
                 SCM_Staff = scm_staff;
 
-                var about_banner = _databaseContext.Banner
-                    .Where(x => x.BannerTypeId == 4)
-                    .FirstOrDefault();
-
-                About_Banner = about_banner;
-
             }
             catch (Exception ex)
             {
@@ -90,5 +93,15 @@ namespace SCMWebApp.Pages
             }
         }
 
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (Student.Name==null || Student.Email==null || Student.PhoneNumber == null)
+            {
+                return Page();
+            }
+            _databaseContext.Add(Student);
+            await _databaseContext.SaveChangesAsync();
+            return RedirectToPage("./Index");
+        }
     }
 }

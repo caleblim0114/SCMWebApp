@@ -10,7 +10,7 @@
 
     <link href="icon/favicon.ico" rel="shortcut icon">
 </head>
-    <body>
+<body>
     <div id="loading-overlay">
         <div class="loader"></div>
     </div>
@@ -107,7 +107,7 @@
                                  data-responsive_offset="on"
                                  data-paddingtop="['50','50','50','50']"
                                  data-paddingbottom="['50','50','50','50']">
-                                <a href="#" class="text-white sl-phone"><i class="fa fa-phone" aria-hidden="true"></i> Tel:  (+6) 084-367429 (Admin)</a><a href="#" class="text-white sl-email"><i class="fa fa-envelope" aria-hidden="true"></i> scm@uts.edu.my</a>
+                                <a class="text-white sl-phone"><i class="fa fa-phone" aria-hidden="true"></i> Tel:  (+6) 084-367429 (Admin)</a><a class="text-white sl-email"><i class="fa fa-envelope" aria-hidden="true"></i> scm@uts.edu.my</a>
                             </div>
                         </li>
                     }
@@ -177,7 +177,9 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div class="imagebox-courses-type1">
                             <div class="featured-post">
-                                <img src="images/home/bcs_img.jpg" alt="images" style="max-height:320px; max-width:410px;">
+                                <a href="/bcs">
+                                    <img src="images/home/bcs_img.jpg" alt="images" style="max-height:320px; max-width:410px;">
+                                </a>
                             </div>
                             <div class="author-info">
                                 <div class="avatar">
@@ -195,7 +197,9 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div class="imagebox-courses-type1">
                             <div class="featured-post">
-                                <img src="images/home/bai_img.jpg" alt="images" style="max-height:320px; max-width:410px;">
+                                <a href="#">
+                                    <img src="images/home/bai_img.jpg" alt="images" style="max-height:320px; max-width:410px;">
+                                </a>
                             </div>
                             <div class="author-info">
                                 <div class="avatar">
@@ -213,7 +217,9 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div class="imagebox-courses-type1">
                             <div class="featured-post">
-                                <img src="images/home/bdm_img.jpg" alt="images" style="max-height:320px; max-width:410px;">
+                                <a href="#">
+                                    <img src="images/home/bdm_img.jpg" alt="images" style="max-height:320px; max-width:410px;">
+                                </a>
                             </div>
                             <div class="author-info">
                                 <div class="avatar">
@@ -231,7 +237,9 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div class="imagebox-courses-type1">
                             <div class="featured-post">
-                                <img src="images/home/bmd_img.jpg" alt="images" style="max-height:320px; max-width:410px;">
+                                <a href="#">
+                                    <img src="images/home/bmd_img.jpg" alt="images" style="max-height:320px; max-width:410px;">
+                                </a>
                             </div>
                             <div class="author-info">
                                 <div class="avatar">
@@ -318,7 +326,7 @@
                 @*bind db*@
                 <div class="videobox">
                     <a class="fancybox" data-type="iframe" href="https://www.youtube.com/embed/X9mveMYAzDY">
-                        <img src="@(Model.About_Banner.ImagePath)" alt="images">
+                        <img src="@(Model.About_Banner.ImagePath)" alt="images" style="height:600px; width:8500px;">
                     </a>
                     <div class="elip-top">
                         <img src="images/home/42.png" alt="images">
@@ -387,7 +395,7 @@
                                         </div>
                                         <div class="iconbox-content img-one">
                                             <h3>
-                                                <a href="#">Certificate</a>
+                                                <a>Certificate</a>
                                             </h3>
                                             <p>
                                                 Courses in University of Technology Sarawak are certified by Malaysian Qualification Agency and are used in whole Malaysia.
@@ -404,7 +412,7 @@
                                         </div>
                                         <div class="iconbox-content img-two">
                                             <h3>
-                                                <a href="#">Life Programs</a>
+                                                <a>Life Programs</a>
                                             </h3>
                                             <p>
                                                 University of Technology Sarawak is one of the essential in life changing for Malaysian or even human beings.
@@ -421,8 +429,8 @@
                                         </div>
                                         <div class="iconbox-content img-three">
                                             <h3>
-                                                <a href="#">Affordability</a>
-                                            </h3>
+                                                <a>Affordability</a>
+                                            </h3>s
                                             <p>
                                                 Having trouble with financial? No worries! our university provides financial aids up to 100% for you!
                                             </p>
@@ -438,7 +446,7 @@
                                         </div>
                                         <div class="iconbox-content img-four">
                                             <h3>
-                                                <a href="#">Social</a>
+                                                <a>Social</a>
                                             </h3>
                                             <p>
                                                 University of Technology Sarawak provides excellent graduands that ready to serve with society.
@@ -462,16 +470,26 @@
                     </div>
                     <div class="form-apply">
                         <div class="section-overlay183251"></div>
-                        <form action="#" class="apply-now">
+                        <form method="post" class="apply-now" enctype="multipart/form-data">
                             <ul>
-                                <li><input type="search" placeholder="Name"></li>
-                                <li><input type="search" placeholder="Email"></li>
-                                <li><input type="search" placeholder="Phone"></li>
+                                <li><input type="text" name="Name" asp-for="Student.Name" placeholder="Name"></li>
+                                <li><input type="text" name="Email" asp-for="Student.Email" placeholder="Email"></li>
+                                <li><input type="tel" name="PhoneNumber" asp-for="Student.PhoneNumber" placeholder="Phone"></li>
+                                <li>
+                                    <div style="text-align:center; color:#dfdfdf">
+                                        Bachelor (Hons)
+                                    </div>
+                                    <select class="form-control" asp-for="Student.Programme" name="ProgrammeId" title="Bachelor (Hons) / Postgraduate" style="background-color:transparent; text-align:center; color:#dfdfdf;">
+                                        <option value="1" style="color:black;">Mobile Game Development</option>
+                                        <option value="2" style="color:black;">Computer Science</option>
+                                        <option value="3" style="color:black;">Industrial Design</option>
+                                        <option value="4" style="color:black;">Creative Digital Media</option>
+                                        <option value="6" style="color:black;">Postgraduate</option>
+                                    </select>
+                                </li>
                             </ul>
                             <div class="btn-50 hv-border text-center">
-                                <button class="btn bg-clff5f60">
-                                    Apply now
-                                </button>
+                                <button class="btn bg-clff5f60" type="submit">Submit Now</button>
                             </div>
                         </form>
                     </div>
@@ -590,15 +608,15 @@
                         <ul class="info-quick-link">
                             <li>
                                 <img src="images/home/graduate_hat.png" alt="images">
-                                <a href="#">About University</a>
+                                <a href="https://www.uts.edu.my/about-university/">About University</a>
                             </li>
                             <li>
                                 <img src="images/home/facility.png" alt="images">
-                                <a href="#">School Facilities</a>
+                                <a href="https://drac.uts.edu.my/facilities/">School Facilities</a>
                             </li>
                             <li>
                                 <img src="images/home/wallet.png" alt="images">
-                                <a href="#">Tuition Fee</a>
+                                <a href="https://www.uts.edu.my/tuition-fees/">Tuition Fee</a>
                             </li>
                             <li>
                                 <img src="images/home/finance.png" alt="images">
@@ -606,7 +624,7 @@
                             </li>
                             <li>
                                 <img src="images/home/student.png" alt="images">
-                                <a href="#">International Student</a>
+                                <a href="https://cir.uts.edu.my/">International Student</a>
                             </li>
                         </ul>
                     </div>
@@ -616,5 +634,5 @@
     </section>
 
     <!-- quick-link -->
-    </body>
+</body>
 </html>
