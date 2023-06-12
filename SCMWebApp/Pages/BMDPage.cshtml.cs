@@ -1,36 +1,35 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
 using SCMWebApp.Shared.Models;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace SCMWebApp.Pages
 {
-    public class BCSPageModel : PageModel
+    public class BMDPageModel : PageModel
     {
         private SCMWebAppDatabaseContext _databaseContext;
-
-        public BCSPageModel(SCMWebAppDatabaseContext databaseContext)
+        
+        public BMDPageModel(SCMWebAppDatabaseContext databaseContext)
         {
             _databaseContext = databaseContext;
         }
 
         [BindProperty]
-        public Staff? BCS_Staff { get; set; } = new();
+        public Staff BMDStaff { get; set; } = new();
 
         [BindProperty]
-        public Banner? Banner { get; set; } = new();
+        public Banner Banner { get; set; } = new();
 
         public async void OnGet()
         {
             try
             {
-                var bcs_staff = _databaseContext.Staff
-                    .Where(x => x.ProgrammeId == 2)
-                    .Include(x=>x.Position)
+                var bmdStaff = _databaseContext.Staff
+                    .Where(x => x.ProgrammeId == 1)
+                    .Include(x => x.Position)
                     .FirstOrDefault();
 
-                BCS_Staff = bcs_staff;
+                BMDStaff = bmdStaff;
 
                 var banner = _databaseContext.Banner
                     .Where(x => x.BannerTypeId == 1)

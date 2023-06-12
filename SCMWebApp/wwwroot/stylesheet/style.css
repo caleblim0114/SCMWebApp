@@ -1405,7 +1405,7 @@ input::-webkit-input-placeholder {
 
 /*blog*/
 .bg-header {
-    background-image: url('../images/logo/utsltc.png');
+    background-image: url('../images/logo/utsltc_darken.png');
     height: 579px;
     background-repeat: no-repeat;
 }
@@ -4572,7 +4572,7 @@ input::-webkit-input-placeholder {
     margin-top: 18px;
 }
 .certificate .certificate-wrap{
-    width: 61%;
+    width: 100%;
     float: left;
 }
 .certificate .certificate-wrap ul li{
@@ -4587,7 +4587,7 @@ input::-webkit-input-placeholder {
     margin-bottom: 34px;
 }
 .certificate .images-certificate{
-    width: 35%;
+    width: 100;
     float: left;
 }
 .certificate .certificate-wrap .list-certificate li:before{

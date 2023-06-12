@@ -1,13 +1,13 @@
-﻿@page "/bcs"
-@model SCMWebApp.Pages.BCSPageModel
+﻿@page "/bmd"
+@model SCMWebApp.Pages.BMDPageModel
 @{
-    ViewData["Title"] = "BCS page";
+    ViewData["Title"] = "BMD page";
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>UTS | BCS</title>
+    <title>UTS | BMD</title>
 
     <link href="icon/favicon.ico" rel="shortcut icon">
 </head>
@@ -25,10 +25,10 @@
                                 <ul class="breadcrumbs-inner">
                                     <li><a href="/">Home</a></li>
                                     <li><a href="/course">Course</a></li>
-                                    <li><a href="/bcs">Computer Science</a></li>
+                                    <li><a href="/bmd">Mobile Game Development</a></li>
                                 </ul>
                                 <div class="title">
-                                    Bachelor of Computer Science(Hons)
+                                    Bachelor of Mobile Game Development(Hons)
                                 </div>
                             </div>
                         </div>
@@ -54,25 +54,25 @@
                             </div>
                             <div class="content">
                                 <div class="title">
-                                    <a href="/bcs">Bachelor of Computer Science</a>
+                                    <a href="/bmd">Bachelor of Mobile Game Development</a>
                                 </div>
                                 <div class="author-price">
                                     <div class="author">
                                         <div class="avatar">
-                                            <img src="@(Model.BCS_Staff.Image)" alt="images">
+                                            <img src="@(Model.BMDStaff.Image)" alt="images">
                                         </div>
                                         <div class="info">
                                             <div class="name">
-                                                <a>@(Model.BCS_Staff.Name)</a>
+                                                <a>@(Model.BMDStaff.Name)</a>
                                             </div>
                                             <div class="job">
-                                                @(Model.BCS_Staff.Position.Role), <br />School of Computing and Creative Media
+                                                @(Model.BMDStaff.Position.Role), <br />School of Computing and Creative Media
                                             </div>
                                         </div>
                                     </div>
                                     <div class="price-wrap price-course-single">
                                         <div class="btn-buynow">
-                                            <a href="mailto:chew.kim.mey@uts.edu.my?subject=Enquiry">Contact Me</a>
+                                            <a href="mailto:jackie@uts.edu.my?subject=Enquiry">Contact Me</a>
                                         </div>
                                     </div>
                                 </div>
@@ -98,7 +98,7 @@
                                                 <a>Course Overview</a>
                                             </div>
                                             <p>
-                                                Computer Science is one of the popular course to be taken. Our university provides graduands three major paths in their future career which are Software Development, Cyber Security and IoT.
+                                                Want explore more into game development specifically in mobile games? You're in the right place! UTS had published another new course for our student to choose which is Bachelor of Mobile Game Development(Hons).
                                             </p>
                                         </div>
                                         <div class="certificate-sg text clearfix">
@@ -109,13 +109,16 @@
                                                 <div class="certificate-wrap">
                                                     <ul class="list-certificate">
                                                         <li>
-                                                            Graduates with good level of knowledge and competency skills will be employed or self-employed in relevant software engineering fields; and with appropriate attitudes will enable them to have successful careers.
+                                                            Analyse and relate broad knowledge of Mobile Game Development concepts and principles to practices incorporating technical skills in relevant fields.
                                                         </li>
                                                         <li>
-                                                            Graduates will acquire abilities for effective communication, collaborative working in diverse teams, and continual development through professional involvement.
-                                                        </li>
+                                                            Commit to take responsibility in leading and deliver assigned tasks when leading, interacting and communicating with peers and stakeholders while ensuring ethical practices.
+                                                        </li> 
                                                         <li>
-                                                            Graduates will pursue lifelong learning in order to contribute to the advancement of information technology and computer science professions and related contemporary issues.
+                                                            Demonstrate technical competency in the innovative and creative use of digital technology and apply numerical techniques in Mobile Game Development.
+                                                        </li>                                                        
+                                                        <li>
+                                                            Commit to life-long learning and exhibit entrepreneurial skills for academic and career advancement in relevant industries and related contemporary issues.
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -128,25 +131,37 @@
                                             </div>
                                             <ul class="request">
                                                 <li>
-                                                    Pass Matriculation/Pre-U/Foundation from recognized institutions with minimum CGPA 2.0 and a credit in Additional Mathematics OR Mathematics and one of the subjects in Science/Technology/Engineering at SPM level; or
+                                                    A pass in STPM with at least Grade C (GP 2.00) in any TWO (2) subjects; OR
                                                 </li>
                                                 <li>
-                                                    Pass STPM/A-level with Grade C (GP 2.0) in any two (2) subjects and a credit in Additional Mathematics OR Mathematics and one of the subjects in Science/Technology/Engineering at SPM level; or
+                                                    A pass in STAM with at least grade Jayyid; OR
                                                 </li>
                                                 <li>
-                                                    Pass STPM in Science Stream with a minimum Grade C (GP 2.0) in a Mathematics subject and a Science/ICT subject; or
+                                                    Matriculation or Foundation with at least CGPA of 2.00; OR
                                                 </li>
                                                 <li>
-                                                    *Diploma (Computer Science/Software Engineering/Information Technology/Information Systems) or equivalent with a minimum CGPA 2.5; or
+                                                    A Diploma (Level 4, MQF) with at least CGPA of 2.00; OR
                                                 </li>
                                                 <li>
-                                                    *Diploma in Science and Technology with minimum CGPA of 2.5.
+                                                    An Advanced Diploma (Level 5, MQF) with at least CGPA of 2.00; OR
                                                 </li>
                                                 <li>
-                                                    Pass UEC with a minimum Grade B in 5 subjects including a Mathematics subject that is equivalent to the Additional Mathematics at SPM level; or
+                                                    A Diploma Kemahiran Malaysia (DKM) / Diploma Vokasional Malaysia (DVM) subjected to HEP Senate / Academic Board’s approval****; OR
                                                 </li>
                                                 <li>
-                                                    Other equivalent qualifications recognized by the Malaysian Government.
+                                                    A Diploma Lanjutan Kemahiran Malaysia (DLKM) subjected to HEP Senate / Academic Board’s approval****; OR
+                                                </li>                                                
+                                                <li>
+                                                    Unified Examination Certificate with a minimum Grade B in 5 subjects; OR
+                                                </li>
+                                                <li>
+                                                    Other relevant equivalent qualifications recognised by the Malaysian Government; AND
+                                                </li>
+                                                <li>
+                                                    Pass an interview (online / virtual / conventional) OR submission of student’s portfolio, to be determined by the HEP as required. AND
+                                                </li>
+                                                <li>
+                                                    For international student, Test of English as a Foreign Language (TOEFL) must pass with score of 500 or International English Language Testing (IELTS) with score of 5.0 or its equivalent. In the event that the student did not meet the criteria, Higher Educational Provider has to offer English course to ensure the student proficiency to meet the needs of programme. This is usually done through evaluation process.
                                                 </li>
                                             </ul>
                                         </div>
@@ -209,11 +224,11 @@
                                                 <p>
                                                     <b>Programme Structure</b>
                                                 </p>
-                                                <ul class="list-certificate">                                                  
+                                                <ul class="list-certificate">
                                                     <li>
-                                                        <a href="https://scm.uts.edu.my/wp-content/uploads/2023/04/2023BCS-Structure-DFinal.pdf">Click Me</a>
+                                                        <a href="https://scm.uts.edu.my/wp-content/uploads/2023/04/2023BMD-Structure-AFinal.pdf">Click me</a>
                                                     </li>
-                                                </ul> <br/>
+                                                </ul> <br />
                                                 <div class="price-course-single">
                                                     <div class="btn-buynow">
                                                         <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
@@ -237,7 +252,7 @@
                                 <ul class="features">
                                     <li>
                                         <a>MQA</a>
-                                        <span>MQA/PA 4984</span>
+                                        <span>MQA/PA 15925</span>
                                     </li>
                                     <li>
                                         <a>Duration</a>
@@ -249,7 +264,7 @@
                                     </li>
                                     <li>
                                         <a>Category</a>
-                                        <span>Technology</span>
+                                        <span>Mobile Development</span>
                                     </li>
                                 </ul>
                                 <div class="share-via">
@@ -304,35 +319,35 @@
                     </div>
                 </div>
             </div>
-        </div> <br/>
-    <script src="javascript/jquery.min.js"></script>
-    <script src="javascript/rev-slider.js"></script>
-    <script src="javascript/plugins.js"></script>
-    <script src="javascript/jquery-countTo.js"></script>
-    <script src="javascript/jquery-ui.js"></script>
-    <script src="javascript/jquery-fancybox.js"></script>
-    <script src="javascript/flex-slider.min.js"></script>
-    <script src="javascript/scroll-img.js"></script>
-    <script src="javascript/owl.carousel.min.js"></script>
-    <script src="javascript/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="javascript/parallax.js"></script>
-    <script src="javascript/jquery-isotope.js"></script>
-    <script src="javascript/equalize.min.js"></script>
-    <script src="javascript/main.js"></script>
+        </div> <br />
+        <script src="javascript/jquery.min.js"></script>
+        <script src="javascript/rev-slider.js"></script>
+        <script src="javascript/plugins.js"></script>
+        <script src="javascript/jquery-countTo.js"></script>
+        <script src="javascript/jquery-ui.js"></script>
+        <script src="javascript/jquery-fancybox.js"></script>
+        <script src="javascript/flex-slider.min.js"></script>
+        <script src="javascript/scroll-img.js"></script>
+        <script src="javascript/owl.carousel.min.js"></script>
+        <script src="javascript/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="javascript/parallax.js"></script>
+        <script src="javascript/jquery-isotope.js"></script>
+        <script src="javascript/equalize.min.js"></script>
+        <script src="javascript/main.js"></script>
 
-    <!-- slider -->
-    <script src="rev-slider/js/jquery.themepunch.tools.min.js"></script>
-    <script src="rev-slider/js/jquery.themepunch.revolution.min.js"></script>
+        <!-- slider -->
+        <script src="rev-slider/js/jquery.themepunch.tools.min.js"></script>
+        <script src="rev-slider/js/jquery.themepunch.revolution.min.js"></script>
 
-    <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.actions.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.carousel.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.kenburn.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.layeranimation.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.migration.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.navigation.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.parallax.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.slideanims.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.video.min.js"></script>
+        <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.actions.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.carousel.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.kenburn.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.layeranimation.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.migration.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.navigation.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.parallax.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.slideanims.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.video.min.js"></script>
 </body>
 </html>

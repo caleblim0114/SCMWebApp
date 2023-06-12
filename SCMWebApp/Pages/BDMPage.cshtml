@@ -1,14 +1,13 @@
-﻿@page "/course"
-@model SCMWebApp.Pages.UndergraduatePageModel
+﻿@page "/bdm"
+@model SCMWebApp.Pages.BDMPageModel
 @{
-    ViewData["Title"] = "Course page";
+    ViewData["Title"] = "BDM page";
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>UTS | Undergraduate Course</title>
+    <title>UTS | BDM</title>
 
     <link href="icon/favicon.ico" rel="shortcut icon">
 </head>
@@ -26,9 +25,10 @@
                                 <ul class="breadcrumbs-inner">
                                     <li><a href="/">Home</a></li>
                                     <li><a href="/course">Course</a></li>
+                                    <li><a href="/bdm">Creative Digital Media</a></li>
                                 </ul>
                                 <div class="title">
-                                    Available Courses
+                                    Bachelor of Arts(Hons) in Creative Digital Media
                                 </div>
                             </div>
                         </div>
@@ -47,27 +47,32 @@
                                 <div class="entry-image">
                                     <div class="videobox">
                                         <a class="fancybox" data-type="iframe" href="https://www.youtube.com/embed/X9mveMYAzDY">
-                                            <img src="@(Model.CourseBanner.ImagePath)" alt="images">
+                                            <img src="@(Model.Banner.ImagePath)" alt="images">
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="content">
                                 <div class="title">
-                                    <a href="/course">School of Computing and Creative Media</a>
+                                    <a href="/bdm">Bachelor of Arts(Honours) in Creative Digital Media</a>
                                 </div>
                                 <div class="author-price">
                                     <div class="author">
                                         <div class="avatar">
-                                            <img src="@(Model.SCM_Staff.Image)" alt="images" style="width: 65px; height:65px;">
+                                            <img src="@(Model.BDMStaff.Image)" alt="images">
                                         </div>
                                         <div class="info">
                                             <div class="name">
-                                                <b>@(Model.SCM_Staff.Name)</b>
+                                                <a>@(Model.BDMStaff.Name)</a>
                                             </div>
                                             <div class="job">
-                                                @(Model.SCM_Staff.Position.Role), School of Computing and Creative Media
+                                                @(Model.BDMStaff.Position.Role), <br />School of Computing and Creative Media
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-wrap price-course-single">
+                                        <div class="btn-buynow">
+                                            <a href="mailto:mohd.suffian@uts.edu.my?subject=Enquiry">Contact Me</a>
                                         </div>
                                     </div>
                                 </div>
@@ -79,7 +84,10 @@
                                     <span class="inner">OVERVIEW</span>
                                 </li>
                                 <li class="item-title curriculum">
-                                    <span class="inner">COURSE</span>
+                                    <span class="inner">TUITION FEE</span>
+                                </li>
+                                <li class="item-title instructor">
+                                    <span class="inner">PROGRAMME</span>
                                 </li>
                             </ul>
                             <div class="tab-content-wrap">
@@ -87,10 +95,10 @@
                                     <div class="item-content">
                                         <div class="question-sg text clearfix">
                                             <div class="title">
-                                                <a>Overview</a>
+                                                <a>Course Overview</a>
                                             </div>
                                             <p>
-                                                Main objective for School of Computing and Creative Media is to produce software engineers capable of fulfilling the professional demands in highly competitive global market with confidence, outstanding ethical and moral values.
+                                                Interested in Design & Modelling? You're in the right place. Creative Digital Media in UTS exposes students mostly on the design & modelling field throughout the course studies!
                                             </p>
                                         </div>
                                         <div class="certificate-sg text clearfix">
@@ -101,25 +109,43 @@
                                                 <div class="certificate-wrap">
                                                     <ul class="list-certificate">
                                                         <li>
-                                                            Graduates with good level of knowledge and competency skills will be employed or self-employed in relevant software engineering fields; and with appropriate attitudes will enable them to have successful careers.
+                                                            Graduate will apply the latest knowledge and techniques of Creative Digital Media to creatively and innovatively solve challenges with high level of competency and entrepreneurship.
                                                         </li>
                                                         <li>
-                                                            Graduates will acquire abilities for effective communication, collaborative working in diverse teams, and continual development through professional involvement.
+                                                            Graduates will demonstrate leadership, management and teamwork skills, and able to communicate effectively in diverse teams.
                                                         </li>
                                                         <li>
-                                                            Graduates will pursue lifelong learning in order to contribute to the advancement of information technology and computer science professions and related contemporary issues.
+                                                            Graduates will pursue lifelong learning in order to contribute to the advancement of the creative digital media professions and addressing related contemporary challenges.
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="description-single text clearfix">
+
+                                        <div class="requirements-sg text clearfix">
                                             <div class="title">
-                                                <a>Description</a>
+                                                <a>Requirements</a>
                                             </div>
-                                            <p>
-                                                Are you a tech-person? You're in the right place! Our School of Computing and Creative Media provides you a great opportunities to excel in your future! Contact us now!
-                                            </p>
+                                            <ul class="request">
+                                                <li>
+                                                    Pass STPM or equivalent with at least a Grade C (NGMP 2.0) in 2 subjects; or
+                                                </li>
+                                                <li>
+                                                    Pass STAM (Jayyid); or
+                                                </li>
+                                                <li>
+                                                    Pass UEC with at least a B grade in 5 subjects; or
+                                                </li>
+                                                <li>
+                                                    Pass Matriculation / Foundation / Foundation from any IPTA / IPTS / Institution that is allowed to offer foundation program with CGPA of 2.00; or
+                                                </li>
+                                                <li>
+                                                    Creative Multimedia Diploma with a minimum CGPA of 2.5 (candidates with CGPA below 2.50 but above 2.00 may be subject to internal evaluation process); or
+                                                </li>
+                                                <li>
+                                                    Other equivalent qualifications subject to approval by university’s senate and recognised by Malaysian Government.
+                                                </li>
+                                            </ul>
                                         </div>
 
                                         <div class="price-course-single">
@@ -131,45 +157,65 @@
                                 </div>
                                 <div class="tab-content">
                                     <div class="item-content">
-                                        <div class="requirements-sg text clearfix">
+                                        <div class="question-sg text clearfix">
                                             <div class="title">
-                                                <a>Our Courses</a>
+                                                <a>Tuition Fee</a>
                                             </div>
-                                            <ul class="request">
-                                                <li>
-                                                    <a href="/bcs">Bachelor of Computer Science(Hons)</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/bid">Bachelor of Arts(Hons) in Industrial Design</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/bdm">Bachelor of Arts(Hons) in Creative Digital Media</a>
-                                                </li>
-                                                <li>
-                                                    <a href="/bmd">Bachelor of Mobile Game Development(Hons</a>
-                                                </li>
-                                            </ul>
+                                            <a href="https://www.uts.edu.my/tuition-fees/">View Programme Fee Here</a>
+                                        </div>
+                                        <div class="access-sg text clearfix">
+                                            <div class="title">
+                                                <a>Need Financial Assistance?</a>
+                                            </div>
+                                            <a href="https://uts.edu.my/wp-content/uploads/2019/04/financial-assistance-apr16-2019.pdf">Click Me</a>
                                         </div>
                                         <div class="certificate-sg text clearfix">
                                             <div class="title">
-                                                <a>Intakes Available</a>
+                                                <a>Study Loan</a>
                                             </div>
-                                            <div class="certificate">
-                                                <div class="certificate-wrap">
-                                                    <ul class="list-certificate">
-                                                        <li>
-                                                            February Intake
-                                                        </li>
-                                                        <li>
-                                                            September Intake
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                            <p>
+                                                Study loan such as <b>PTPTN</b> and <b>MARA</b> are available in UTS.
+                                            </p>
                                         </div>
+
+                                        <div class="requirements-sg text clearfix">
+                                            <div class="title">
+                                                <a>Any Enquiries?</a>
+                                            </div>
+                                            <ul class="request">
+                                                <li>
+                                                    Contact us admin <b>(+6) 084-367300 </b>
+                                                </li>
+                                                <li>
+                                                    Contact us admin <b>enquiry@uts.edu.my</b>
+                                                </li>
+                                            </ul>
+                                        </div>
+
                                         <div class="price-course-single">
                                             <div class="btn-buynow">
                                                 <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="item-content">
+                                        <div class="certificate">
+                                            <div class="certificate-wrap">
+                                                <p>
+                                                    <b>Programme Structure</b>
+                                                </p>
+                                                <ul class="list-certificate">
+                                                    <li>
+                                                        <a href="https://scm.uts.edu.my/wp-content/uploads/2023/04/2023BDM-STRUCTURE-BFinal.pdf">Click Me</a>
+                                                    </li>
+                                                </ul> <br />
+                                                <div class="price-course-single">
+                                                    <div class="btn-buynow">
+                                                        <a href="http://oculus.uts.edu.my/apply/signup.php#type/undergraduate">Enroll Now</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -187,16 +233,20 @@
                             <div class="content">
                                 <ul class="features">
                                     <li>
-                                        <a>Certificate</a>
-                                        <span>Yes</span>
+                                        <a>MQA</a>
+                                        <span>MQA/PA 11221</span>
                                     </li>
                                     <li>
-                                        <a>Education Level</a>
-                                        <span>Degree</span>
+                                        <a>Duration</a>
+                                        <span>3.5 Years</span>
+                                    </li>
+                                    <li>
+                                        <a>Intakes</a>
+                                        <span>February & September</span>
                                     </li>
                                     <li>
                                         <a>Category</a>
-                                        <span>Technology</span>
+                                        <span>Design & Modelling</span>
                                     </li>
                                 </ul>
                                 <div class="share-via">
@@ -222,7 +272,7 @@
                                         <div class="flat-course">
                                             <div class="featured-post">
                                                 <div class="entry-image">
-                                                    <img src="@(Model.WebBanner.ImagePath)" alt="images">
+                                                    <img src="@(Model.Banner.ImagePath)" alt="images">
                                                 </div>
                                             </div>
                                             <div class="course-content clearfix">
@@ -251,64 +301,35 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div><!-- courses-single -->
-    <div class="cta-cr parallax parallax3">
-        <div class="overlay183251"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12">
-                    <div class="cta-content">
-                        <div class="caption">How to start your teaching?</div>
-                        <h3>
-                            Starting your journey with us? Contact us for further guidance!
-                        </h3>
-                        <div class="btn-about-become">
-                            <a href="mailto:enquiry@uts.edu.my?subject=Enquiry">Become a Teacher</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
-                    <div class="cta-information">
-                        <div class="phone">
-                            +(6) 084-367429
-                        </div>
-                        <div class="email">
-                            scm@uts.edu.my
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!-- cta-cr -->
-    <script src="javascript/jquery.min.js"></script>
-    <script src="javascript/rev-slider.js"></script>
-    <script src="javascript/plugins.js"></script>
-    <script src="javascript/jquery-countTo.js"></script>
-    <script src="javascript/jquery-ui.js"></script>
-    <script src="javascript/jquery-fancybox.js"></script>
-    <script src="javascript/flex-slider.min.js"></script>
-    <script src="javascript/scroll-img.js"></script>
-    <script src="javascript/owl.carousel.min.js"></script>
-    <script src="javascript/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="javascript/parallax.js"></script>
-    <script src="javascript/jquery-isotope.js"></script>
-    <script src="javascript/equalize.min.js"></script>
-    <script src="javascript/main.js"></script>
+        </div> <br />
+        <script src="javascript/jquery.min.js"></script>
+        <script src="javascript/rev-slider.js"></script>
+        <script src="javascript/plugins.js"></script>
+        <script src="javascript/jquery-countTo.js"></script>
+        <script src="javascript/jquery-ui.js"></script>
+        <script src="javascript/jquery-fancybox.js"></script>
+        <script src="javascript/flex-slider.min.js"></script>
+        <script src="javascript/scroll-img.js"></script>
+        <script src="javascript/owl.carousel.min.js"></script>
+        <script src="javascript/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="javascript/parallax.js"></script>
+        <script src="javascript/jquery-isotope.js"></script>
+        <script src="javascript/equalize.min.js"></script>
+        <script src="javascript/main.js"></script>
 
-    <!-- slider -->
-    <script src="rev-slider/js/jquery.themepunch.tools.min.js"></script>
-    <script src="rev-slider/js/jquery.themepunch.revolution.min.js"></script>
+        <!-- slider -->
+        <script src="rev-slider/js/jquery.themepunch.tools.min.js"></script>
+        <script src="rev-slider/js/jquery.themepunch.revolution.min.js"></script>
 
-    <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.actions.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.carousel.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.kenburn.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.layeranimation.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.migration.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.navigation.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.parallax.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.slideanims.min.js"></script>
-    <script src="rev-slider/js/extensions/extensionsrevolution.extension.video.min.js"></script>
+        <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.actions.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.carousel.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.kenburn.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.layeranimation.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.migration.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.navigation.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.parallax.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.slideanims.min.js"></script>
+        <script src="rev-slider/js/extensions/extensionsrevolution.extension.video.min.js"></script>
 </body>
 </html>
