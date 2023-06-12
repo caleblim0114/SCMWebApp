@@ -42,7 +42,17 @@
 <body>
 
     <div>
-        <h1>@ViewData["Title"]</h1>
+        <h1 style="float: left">@ViewData["Title"]</h1>
+
+        <div style="float: right">
+            <select class="form-control" id="FilterId" name="FilterId" style="display: flex" onchange="mediaFilter()">
+                <option value="0">All Type</option>
+                <option value="1">Introduction Page</option>
+                <option value="2">Course Banner</option>
+                <option value="4">About Banner</option>
+                <option value="5">About Link</option>
+            </select>
+        </div>
     </div>
 
     <table>
@@ -57,7 +67,7 @@
 
         @foreach (var banner in Model.Banners)
         {
-            <tr>
+            <tr class="image image-@banner.BannerTypeId">
                 <td>
                     <img src="@(banner.ImagePath)" class="my-image">
                 </td>
@@ -81,6 +91,33 @@
         </tr>
     </table>
 
+    @section Scripts {
+        <script>
+            function mediaFilter() {
+                var mediaTypeFilter = document.getElementById("FilterId").value;
+
+                if (mediaTypeFilter == 0) {
+                    var collection = document.getElementsByClassName("image");
+
+                    for (var i = 0; i < collection.length; i++) {
+                        collection[i].style.display = "table-row";
+                    }
+                } else {
+                    var hideCollection = document.getElementsByClassName("image");
+
+                    for (var i = 0; i < hideCollection.length; i++) {
+                        hideCollection[i].style.display = "none";
+                    }
+
+                    var collection = document.getElementsByClassName("image-" + mediaTypeFilter);
+
+                    for (var i = 0; i < collection.length; i++) {
+                        collection[i].style.display = "table-row";
+                    }
+                }
+            }
+        </script>
+    }
 </body>
 </html>
 

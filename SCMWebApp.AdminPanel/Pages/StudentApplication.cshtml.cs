@@ -25,7 +25,7 @@ namespace SCMWebApp.AdminPanel.Pages
         public void OnGet()
         {
             var studentList = _databaseContext.StudentApplication
-                .Where(x=>x.Email!=null)
+                .Where(x=>x.Email!=null && x.ProgrammeId!=null)
                 .Include(x=>x.Programme)
                 .ToList();
 

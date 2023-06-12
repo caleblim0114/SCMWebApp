@@ -2,12 +2,14 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace SCMWebApp.Shared.Models
 {
-    public partial class SCMWebAppDatabaseContext : DbContext
+    public partial class SCMWebAppDatabaseContext : IdentityDbContext<IdentityUser>
     {
         public SCMWebAppDatabaseContext()
         {
@@ -28,6 +30,8 @@ namespace SCMWebApp.Shared.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Banner>(entity =>
             {
                 entity.HasOne(d => d.BannerType)

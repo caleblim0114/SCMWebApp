@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using SCMWebApp.Shared.Models;
 
 namespace SCMWebApp.AdminPanel.Pages
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         [BindProperty]

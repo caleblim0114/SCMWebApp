@@ -1,0 +1,71 @@
+﻿@page
+@model SCMWebApp.AdminPanel.Pages.DeleteStaffModel
+@{
+    ViewData["Title"] = "Remove Staff";
+}
+
+<style>
+    .form-container {
+        width: 300px;
+        height: 600px;
+        background-color: #E7E7E7;
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .image-container {
+        width: 260px;
+        height: 200px;
+        background-color: white;
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+</style>
+
+<div>
+    <h1>@ViewData["Title"]</h1>
+
+    <form name="upload-form" method="post" enctype="multipart/form-data" class="form-container">
+        Current Image:
+        <br />
+        <img src="@(Model.Staff.Image)" style="width: 100px; height: 100px;" />
+        <br />
+        Name:
+        <input type="text" asp-for="NewStaff.Name" name="Name" class="form-control" readonly/>
+        Phone No.:
+        <input type="tel" asp-for="NewStaff.PhoneNum" name="PhoneNum" class="form-control" readonly/>
+        Email:
+        <input type="text" asp-for="NewStaff.Email" name="Email" class="form-control" readonly/>
+        Position:
+        <select asp-for="NewStaff.PositionId" class="form-control" name="PositionId" disabled>
+            <option value="1">Dean</option>
+            <option value="2">Deputy Dean</option>
+            <option value="3">Head of Programme</option>
+            <option value="4">Lecturer</option>
+            <option value="5">Coordinator</option>
+        </select>
+        Programme:
+        <select asp-for="NewStaff.ProgrammeId" class="form-control" name="ProgrammeId" disabled>
+            <option value="1">Bachelor of Mobile Game Development</option>
+            <option value="2">Bachelor of Computer Science</option>
+            <option value="3">Bachelor of Arts in Industrial Design</option>
+            <option value="4">Bachelor of Arts in Creative Digital Media</option>
+            <option value="5">School of Computing and Creative Media</option>
+            <option value="6">School of Postgraduate Studies</option>
+        </select>
+        <br />
+        <input type="submit" value="Remove" />
+    </form>
+</div>

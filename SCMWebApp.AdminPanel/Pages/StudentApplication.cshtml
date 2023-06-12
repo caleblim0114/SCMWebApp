@@ -42,7 +42,18 @@
 <body>
 
     <div>
-        <h1>@ViewData["Title"]</h1>
+        <h1 style="float: left">@ViewData["Title"]</h1>
+
+        <div style="float: right; margin: 10px,0,0,0">
+            <select class="form-control" id="ProgrammeFilterId" name="ProgrammeFilterId" style="display: flex" onchange="programmeFilter()">
+                <option value="0">All Programme</option>
+                <option value="1">Bachelor of Mobile Game Development</option>
+                <option value="2">Bachelor of Computer Science</option>
+                <option value="3">Bachelor of Arts in Industrial Design</option>
+                <option value="4">Bachelor of Arts in Creative Digital Media</option>
+                <option value="6">Postgraduate Studies</option>
+            </select>
+        </div>
     </div>
 
     <table>
@@ -51,26 +62,50 @@
             <th>Phone No.</th>
             <th>Email</th>
             <th>Programme</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>Remove</th>
         </tr>
 
         @foreach (var student in Model.Students)
         {
-            <tr>
+            <tr class="programme programme-@student.ProgrammeId">
                 <td>@(student.Name)</td>
                 <td>@(student.PhoneNumber)</td>
                 <td>@(student.Email)</td>
                 <td>@(student.Programme.Name)</td>
                 <td>
-                    <a href="/EditStaff?id=@student.Id">Edit</a>
-                </td>
-                <td>
-                    <a href="/DeleteStaff?id=@student.Id">Delete</a>
+                    <a href="/RemoveStudentApplication?id=@student.Id">Remove</a>
                 </td>
             </tr>
         }
     </table>
+
+    @section Scripts {
+        <script>
+            function programmeFilter() {
+                var programmeFilter = document.getElementById("ProgrammeFilterId").value;
+
+                if (programmeFilter == 0 && positionFilter == 0) {
+                    var collection = document.getElementsByClassName("programme");
+
+                    for (var i = 0; i < collection.length; i++) {
+                        collection[i].style.display = "table-row";
+                    }
+                } else {
+                    var hideCollection = document.getElementsByClassName("programme");
+
+                    for (var i = 0; i < hideCollection.length; i++) {
+                        hideCollection[i].style.display = "none";
+                    }
+
+                    var collection = document.getElementsByClassName("programme-" + programmeFilter);
+
+                    for (var i = 0; i < collection.length; i++) {
+                        collection[i].style.display = "table-row";
+                    }
+                }
+            }
+        </script>
+    }
 
 </body>
 </html>

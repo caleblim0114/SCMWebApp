@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SCMWebApp.AdminPanel.Services;
 using SCMWebApp.Shared.Models;
+using SCMWebAppDatabaseContext = SCMWebApp.Shared.Models.SCMWebAppDatabaseContext;
 
 namespace SCMWebApp.AdminPanel.Pages
 {

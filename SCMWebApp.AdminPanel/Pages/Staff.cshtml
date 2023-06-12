@@ -42,7 +42,19 @@
 <body>
 
     <div>
-        <h1>@ViewData["Title"]</h1>
+        <h1 style="float: left">@ViewData["Title"]</h1>
+
+        <div style="float: right; margin: 10px,0,0,0">
+            <select class="form-control" id="ProgrammeFilterId" name="ProgrammeFilterId" style="display: flex" onchange="staffFilter()">
+                <option value="0">All Programme</option>
+                <option value="1">Bachelor of Mobile Game Development</option>
+                <option value="2">Bachelor of Computer Science</option>
+                <option value="3">Bachelor of Arts in Industrial Design</option>
+                <option value="4">Bachelor of Arts in Creative Digital Media</option>
+                <option value="5">School of Computing and Creative Media</option>
+                <option value="6">School of Postgraduate Studies</option>
+            </select>
+        </div>
     </div>
 
     <table>
@@ -59,7 +71,7 @@
 
         @foreach (var staff in Model.Staffs)
         {
-            <tr>
+            <tr class="programme programme-@staff.ProgrammeId">
                 <td>
                     <img src="@(staff.Image)" class="my-image">
                 </td>
@@ -84,5 +96,32 @@
         </tr>
     </table>
 
+    @section Scripts {
+        <script>
+            function staffFilter() {
+                var programmeFilter = document.getElementById("ProgrammeFilterId").value;
+
+                if (programmeFilter == 0) {
+                    var collection = document.getElementsByClassName("programme");
+
+                    for (var i = 0; i < collection.length; i++) {
+                        collection[i].style.display = "table-row";
+                    }
+                } else {
+                    var hideCollection = document.getElementsByClassName("programme");
+
+                    for (var i = 0; i < hideCollection.length; i++) {
+                        hideCollection[i].style.display = "none";
+                    }
+
+                    var collection = document.getElementsByClassName("programme-" + programmeFilter);
+
+                    for (var i = 0; i < collection.length; i++) {
+                        collection[i].style.display = "table-row";
+                    }
+                }
+            }
+        </script>
+    }
 </body>
 </html>

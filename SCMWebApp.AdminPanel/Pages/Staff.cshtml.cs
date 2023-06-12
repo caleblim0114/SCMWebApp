@@ -11,6 +11,9 @@ namespace SCMWebApp.AdminPanel.Pages
         [BindProperty]
         public List<Staff> Staffs { get; set; } = new List<Staff>();
 
+        [BindProperty]
+        public int FilterId { get; set; } = 0;
+
         private readonly ILogger<StaffModel> _logger;
         private SCMWebAppDatabaseContext _databaseContext;
         private IFileStorageService _fileStorageService;
@@ -30,6 +33,11 @@ namespace SCMWebApp.AdminPanel.Pages
                 .ToList();
 
             Staffs = staffList;
+        }
+
+        public void OnFilter()
+        {
+
         }
     }
 }
